@@ -1,9 +1,18 @@
 #include "data.h"
-#include "elog.h"
 
-Pipe_Parameters_t g_parameters;
+#include <stdbool.h>
 
-kalman_t kf = {0.0, 15.0, 0.005, 0.1, 0.0};
+/* ========================= 全局数据定义 ========================= */
+
+Pipe_Parameters_t g_parameters = {0};
+
+kalman_t kf =
+    {
+        .x = 0.0,
+        .p = 15.0,
+        .q = 0.005,
+        .r = 0.1,
+        .k = 0.0};
 
 Pipe_algo_state_t g_algo_state =
     {
@@ -18,43 +27,46 @@ Pipe_algo_state_t g_algo_state =
         .window_idx = 0,
         .step_cnt = 0,
         .window_full = false,
-};
 
-Pipe_algo_out_data_t g_algo_out = {0.0, 0.0, 0.0, 0.0};
-
-algo_state_t g_algo =
-    {
-        .pipe_dn = 20.0f,
-        .te_ns = 12000.0f,
-        .cos_sin = 0.3715f,
-        .zero_offset = 0.0f,
-        .zero_stable = 0,
         .q_total_m3 = 0.0};
+
+Pipe_algo_out_data_t g_algo_out =
+    {
+        .flow_speed = 0.0,
+        .flow_rate_instant = 0.0,
+        .flow_rate_total = 0.0,
+        .sq_value = 0.0};
 
 ALARM_TYPE g_alarm = ALARM_OK;
 
-// 初始化参数变量
+/* ========================= 参数初始化 ========================= */
+
 void parameter_init(void)
 {
-    Pipe_Parameters_t default_pipe_parameters =
+    const Pipe_Parameters_t default_pipe_parameters =
         {
             .inner_diameter = 20.0,
             .wall_thick = 1.0,
             .cos_value = 0.913545,
             .sin_value = 0.406738,
+
             .lower_speed_range = 0.05,
             .upper_speed_range = 20.0,
+
             .alarm_lower_rate_range = 0.3,
             .alarm_upper_rate_range = 4.8,
+
 #if USE_MODBUS
             .modbus_addr = 1,
             .k_factor = 5,
 #endif
+
             .zero_offset_speed = 0.0,
             .zero_learn_flow_speed = 0.08,
             .zero_learn_alpha = 0.005,
             .zero_learn_offset_max = 0.2,
             .zero_learn_sq_min = 95.0,
+
             .te_ns = 12000.0,
 
             .is_saved = 0,
@@ -64,24 +76,56 @@ void parameter_init(void)
 
             .pipe_type = PIPE_PVC,
             .speed_unit_type = SPEED_UNIT_M_P_S,
-            .rate_unit_type = RATE_UNIT_M3_P_H,
-        }
+            .rate_unit_type = RATE_UNIT_M3_P_H};
+
 #if USE_EEPROM
-    LoadParameter(&g_parameters);
-    if (g_parameters.is_saved != 1)
+    if (LoadParameters(&g_parameters) != E2PROM_OK)
     {
-        SaveParameter(&default_pipe_parameters);
+        g_parameters = default_pipe_parameters;
+        return;
     }
-    LoadParameter(&g_parameters);
+
+    if (g_parameters.is_saved != 1U)
+    {
+        (void)SaveParameters((Pipe_Parameters_t *)&default_pipe_parameters);
+        (void)LoadParameters(&g_parameters);
+    }
 #else
-    memcpy(&g_parameters, &default_pipe_parameters, sizeof(Pipe_Parameters_t));
+    g_parameters = default_pipe_parameters;
 #endif
+    log_v("parameter loaded");
 }
+
+/* ========================= EEPROM 参数接口 ========================= */
 
 e2prom_status_t SaveParameters(Pipe_Parameters_t *para)
 {
+    if (para == NULL)
+    {
+        return E2PROM_ERROR;
+    }
+
+    /* TODO:
+       1. 将 *para 按字节写入 EEPROM
+       2. 建议附带版本号 / CRC / is_saved 标志
+       3. 写成功后返回 E2PROM_OK
+    */
+
+    return E2PROM_OK;
 }
 
 e2prom_status_t LoadParameters(Pipe_Parameters_t *para)
 {
+    if (para == NULL)
+    {
+        return E2PROM_ERROR;
+    }
+
+    /* TODO:
+       1. 从 EEPROM 读出参数到 *para
+       2. 校验数据是否合法（可加 CRC / magic）
+       3. 读成功返回 E2PROM_OK
+    */
+
+    return E2PROM_OK;
 }

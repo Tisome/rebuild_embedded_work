@@ -1,5 +1,9 @@
 #include "algorithm_flow.h"
 
+#include "elog.h"
+#define LOG_TAG "algo_flow_out"
+#define LOG_LVL ELOG_LVL_VERBOSE
+
 // 更新 3 秒窗口坏数据统计（环形缓冲）
 static void sq_window_update(Pipe_algo_state_t *s, bool is_bad)
 {
@@ -36,17 +40,20 @@ static double calc_t_other_ns(Pipe_Parameters_t *para)
 
     if (para == NULL)
     {
+        log_e("para pointer don't exist!");
         return 0.0;
     }
 
     /* 防止除0或非法参数 */
     if (para->cos_value <= 0.0)
     {
+        log_e("cos_value is 0!");
         return 0.0;
     }
 
     if (para->wall_thick <= 0.0)
     {
+        log_e("wall_thick is 0!");
         return 0.0;
     }
 
@@ -67,6 +74,7 @@ static double calc_t_other_ns(Pipe_Parameters_t *para)
         break;
 
     default:
+        log_e("pipe_type is wrong!");
         wall_speed_mps = 3000.0; // 默认兜底
         break;
     }
@@ -88,7 +96,6 @@ static double calc_t_other_ns(Pipe_Parameters_t *para)
 /**  根据 dt 计算原始流速 v（m/s）
  * 公式：v = dt * L1 / (cos_sin * (t1 - te) * (t2 - te))
  *
- * 约定：
  * - t1_ns / t2_ns / dt_ns : ns
  * - te : us（会转换为 ns）
  * - L1 = pipe_dn : mm
@@ -115,6 +122,7 @@ static double vel_calc_from_dt(const Pipe_Parameters_t *para,
 
     if (cos_sin == 0.0 || a <= 0.0 || b <= 0.0)
     {
+        log_e("cos*sin = 0!");
         return 0.0;
     }
 
@@ -137,10 +145,10 @@ static double vel_calc_from_dt(const Pipe_Parameters_t *para,
  *  - 输出时对窗口排序，按箱线图（IQR）剔除离群值，再求平均
  */
 static bool flow_window_add(Pipe_algo_state_t *state,
-                            double *v_raw,
-                            double *v_avg)
+                            double v_raw,
+                            double v_avg)
 {
-    state->window_buf[state->window_idx] = *v_raw;
+    state->window_buf[state->window_idx] = v_raw;
     state->window_idx = (uint8_t)((state->window_idx + 1U) % FLOW_WINDOW_LEN);
     if (state->window_idx == 0U)
     {
@@ -196,7 +204,7 @@ static bool flow_window_add(Pipe_algo_state_t *state,
         return false;
     }
 
-    *v_avg = sum / (double)cnt;
+    v_avg = sum / (double)cnt;
     return true;
 }
 

@@ -1,6 +1,10 @@
 #include "algorithm_packet.h"
 #include <math.h>
 
+#include "elog.h"
+#define LOG_TAG "algo_packet"
+#define LOG_LVL ELOG_LVL_VERBOSE
+
 static int64_t sign_extend_48(uint64_t v)
 {
     if (v & 0x800000000000ULL)
@@ -53,6 +57,7 @@ bool rufx_calc_t1_t2_dt(const rufx_packet_t *pkt,
     const double den = (y3 - 2.0 * y2 + y1);
     if (fabs(den) < 1e-6)
     {
+
         return false;
     }
 

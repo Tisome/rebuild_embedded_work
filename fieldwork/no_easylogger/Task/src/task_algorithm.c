@@ -11,6 +11,12 @@
 #include "queue.h"
 #include "sys.h"
 
+#include <stdbool.h>
+
+#include "elog.h"
+#define LOG_TAG "algo_task"
+#define LOG_LVL ELOG_LVL_VERBOSE
+
 static TaskHandle_t task_algorithm_handle = NULL;
 
 void task_algorithm(void *pvParameter)
@@ -27,6 +33,7 @@ void task_algorithm(void *pvParameter)
     {
         if (xQueueReceive(xQueue_Rx_Index_Buf, &raw, pdMS_TO_TICKS(10)) == pdTRUE)
         {
+            log_v("receive rufx raw packet");
             g_alarm = ALARM_OK;
 
             rufx_packet_t pkt;
@@ -34,6 +41,7 @@ void task_algorithm(void *pvParameter)
 
             if (cur_seq == last_seq)
             {
+                log_e("repeat packet!");
                 g_alarm = ALARM_REPEAT_PACKET;
             }
             last_seq = cur_seq;
@@ -44,24 +52,29 @@ void task_algorithm(void *pvParameter)
                 continue;
             }
 
-            algorithm_process_group(&g_parameters,
-                                    &g_algo_state,
-                                    &g_algo_out,
-                                    t1,
-                                    t2,
-                                    dt);
-            (void)xQueueOverwrite(xQueue_AlgoOut, &g_algo_out);
+            bool has_new_output = algorithm_process_group(&g_parameters,
+                                                          &g_algo_state,
+                                                          &g_algo_out,
+                                                          t1,
+                                                          t2,
+                                                          dt);
+            if (has_new_output)
+            {
+                log_i("send new algo_out data");
+                (void)xQueueOverwrite(xQueue_AlgoOut, &g_algo_out);
+            }
         }
         else
         {
+            log_e("rufx raw packet out of time");
             g_alarm = ALARM_OUT_OF_TIME;
         }
     }
 }
 
-TaskHandle_t *get_task_algorithm_handle(void)
+TaskHandle_t get_algorithm_task_handle(void)
 {
-    return &task_algorithm_handle;
+    return task_algorithm_handle;
 }
 
 void do_create_algorithm_task(void)

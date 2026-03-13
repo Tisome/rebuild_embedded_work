@@ -1,9 +1,4 @@
 /**
- * @file    SPI_FPGA_ReceiverTask.c
- * @author  Ye Dingzai
- * @brief   SPI 接收 FPGA 数据任务（DMA方式）
- * @date    2026-02-02
- *
  * 功能说明：
  * 1) FPGA 在有一帧数据准备好后，通过 FPGA_INT 引脚触发中断通知 MCU。
  *    在 FPGA_INT 的 EXTI 中断服务函数（ISR）中会释放 xSem_FPGA_INT 信号量。
@@ -47,7 +42,7 @@
 static uint8_t Rx_Index_Buf[RUF_X_PACKET_SIZE_BYTES]; // SPI DMA 接收缓冲区（按字节存放）
 #define RX_INDEX_SIZE RUF_X_PACKET_SIZE_BYTES         // 本次 DMA 接收的字节数（与 FPGA 协议包长度一致）
 
-void vSPI_Rx_task(void *pvParameter)
+void task_spi_rx(void *pvParameter)
 {
     (void)pvParameter;
     rufx_raw_packet_t packet = {0};
@@ -90,21 +85,21 @@ void vSPI_Rx_task(void *pvParameter)
     }
 }
 
-static TaskHandle_t task_algorithm_handle = NULL; /* 创建任务句柄 */
+static TaskHandle_t task_spi_rx_handle = NULL; /* 创建任务句柄 */
 
-TaskHandle_t *get_task_algorithm_handle(void)
+TaskHandle_t get_spi_rx_task_handle(void)
 {
-    return &task_algorithm_handle;
+    return task_spi_rx_handle;
 }
 
-void do_create_algorithm_task(void)
+void do_create_spi_rx_task(void)
 {
     BaseType_t xReturn = pdPASS; /* 定义一个创建信息返回值，默认为pdPASS */
     /* 创建AppTaskCreate任务 */
-    xReturn = xTaskCreate(task_algorithm,
-                          "task_algorithm",
-                          512,
+    xReturn = xTaskCreate(task_spi_rx,
+                          "task_spi_rx",
+                          128,
                           NULL,
                           9,
-                          &task_algorithm_handle);
+                          &task_spi_rx_handle);
 }
