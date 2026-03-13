@@ -36,19 +36,21 @@
 #include "sys.h"
 
 /************************* app header file *************************/
+#include "data.h"
+#include "elog.h"
 #include "freertos_resources.h"
 #include "task_manager.h"
 
 /************************* std header file *************************/
 #include <string.h>
 
-uint8_t Rx_Index_Buf[RUF_X_PACKET_SIZE_BYTES]; // SPI DMA 接收缓冲区（按字节存放）
-#define RX_INDEX_SIZE RUF_X_PACKET_SIZE_BYTES  // 本次 DMA 接收的字节数（与 FPGA 协议包长度一致）
+static uint8_t Rx_Index_Buf[RUF_X_PACKET_SIZE_BYTES]; // SPI DMA 接收缓冲区（按字节存放）
+#define RX_INDEX_SIZE RUF_X_PACKET_SIZE_BYTES         // 本次 DMA 接收的字节数（与 FPGA 协议包长度一致）
 
 void vSPI_Rx_task(void *pvParameter)
 {
     (void)pvParameter;
-
+    rufx_raw_packet_t packet = {0};
     while (1)
     {
         // 1) 等待 FPGA_INT 中断对应的信号量（该信号量一般在 EXTI ISR 中释放）
@@ -58,20 +60,51 @@ void vSPI_Rx_task(void *pvParameter)
         SPI1_NSS_CS(FPGA_CS_ENABLE);
 
         // 3) 启动 SPI DMA 接收：DMA 自动把 SPI RX 数据搬运到 Rx_Index_Buf
-        HAL_SPI_Receive_DMA(&hspi1, Rx_Index_Buf, RX_INDEX_SIZE);
+        if (HAL_SPI_Receive_DMA(&hspi1, Rx_Index_Buf, RX_INDEX_SIZE) != HAL_OK)
+        {
+            // 3.1) 未启动DMA，拉高 CS，结束本次 SPI 帧读
+            SPI1_NSS_CS(FPGA_CS_DISABLE);
+            log_e("HAL_SPI_Receive_DMA didn't work\n");
+            continue;
+        }
 
         // 4) 等待 DMA 接收完成（通常在 HAL_SPI_RxCpltCallback() 中释放 xSem_SPI_Rx_Done）
-        xSemaphoreTake(xSem_SPI_Rx_Done, portMAX_DELAY);
+        if (xSemaphoreTake(xSem_SPI_Rx_Done, pdMS_TO_TICKS(20)) != pdTRUE)
+        {
+            SPI1_NSS_CS(FPGA_CS_DISABLE);
+            // 这里做错误恢复：统计、停DMA、复位SPI等
+            log_e("xSem_SPI_Rx_Done wasn't released\n");
+            continue;
+        }
 
         // 5) 拉高 CS，结束本次 SPI 帧读
         SPI1_NSS_CS(FPGA_CS_DISABLE);
 
         // 6) 将接收缓冲区内容打包成协议结构体（按字节拷贝）
-        rufx_raw_packet_t packet;
         memcpy(packet.bytes, Rx_Index_Buf, RUF_X_PACKET_SIZE_BYTES);
+        packet.seq++;
 
         // 7) 通过队列发送给算法任务：
         //    队列内部会拷贝 sizeof(packet) 字节，因此 packet 是局部变量也没关系
-        xQueueSend(xQueue_Rx_Index_Buf, &packet, portMAX_DELAY);
+        xQueueOverwrite(xQueue_Rx_Index_Buf, &packet, portMAX_DELAY);
     }
+}
+
+static TaskHandle_t task_algorithm_handle = NULL; /* 创建任务句柄 */
+
+TaskHandle_t *get_task_algorithm_handle(void)
+{
+    return &task_algorithm_handle;
+}
+
+void do_create_algorithm_task(void)
+{
+    BaseType_t xReturn = pdPASS; /* 定义一个创建信息返回值，默认为pdPASS */
+    /* 创建AppTaskCreate任务 */
+    xReturn = xTaskCreate(task_algorithm,
+                          "task_algorithm",
+                          512,
+                          NULL,
+                          9,
+                          &task_algorithm_handle);
 }
