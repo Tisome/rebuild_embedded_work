@@ -53,8 +53,8 @@ void parameter_init(void)
             .lower_speed_range = 0.05,
             .upper_speed_range = 20.0,
 
-            .alarm_lower_rate_range = 0.3,
-            .alarm_upper_rate_range = 4.8,
+            .alarm_lower_rate_range = 10.0,
+            .alarm_upper_rate_range = 40.0,
 
 #if USE_MODBUS
             .modbus_addr = 1,
@@ -76,7 +76,7 @@ void parameter_init(void)
 
             .pipe_type = PIPE_PVC,
             .speed_unit_type = SPEED_UNIT_M_P_S,
-            .rate_unit_type = RATE_UNIT_M3_P_H};
+            .rate_unit_type = RATE_UNIT_L_P_MIN};
 
 #if USE_EEPROM
     if (LoadParameters(&g_parameters) != E2PROM_OK)

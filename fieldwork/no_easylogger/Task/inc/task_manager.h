@@ -21,6 +21,9 @@ TaskHandle_t get_key_task_handle(void);
 void do_create_spi_rx_task(void);
 TaskHandle_t get_spi_rx_task_handle(void);
 
+void do_create_test_task(void);
+TaskHandle_t get_test_task_handle(void);
+
 void do_create_bsp_e2prom_task(void);
 TaskHandle_t get_bsp_e2prom_task_handle(void);
 

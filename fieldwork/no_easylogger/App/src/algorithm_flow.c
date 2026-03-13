@@ -32,7 +32,7 @@ static double sq_get_percent(const Pipe_algo_state_t *s)
     return 100.0 * (1.0 - (bad / total));
 }
 
-static double calc_t_other_ns(Pipe_Parameters_t *para)
+double calc_t_wall_ns(Pipe_Parameters_t *para)
 {
     double wall_speed_mps = 0.0; // 管壁中声速，单位 m/s
     double path_wall_m = 0.0;    // 管壁总传播路径，单位 m
@@ -111,14 +111,14 @@ static double vel_calc_from_dt(const Pipe_Parameters_t *para,
 
     // te：系统固定误差（us -> ns）
     const double te_ns = para->te_ns;
-    const double te_other_ns = calc_t_other_ns(para);
+    const double te_wall_ns = calc_t_wall_ns(para); // 管壁传播时间
 
     // L1：这里直接用 pipe_dn（mm）
     const double L1_mm = para->inner_diameter;
 
     // ---- 合法性检查 ----
-    const double a = t1_ns - te_ns - te_other_ns;
-    const double b = t2_ns - te_ns - te_other_ns;
+    const double a = t1_ns - te_ns - te_wall_ns;
+    const double b = t2_ns - te_ns - te_wall_ns;
 
     if (cos_sin == 0.0 || a <= 0.0 || b <= 0.0)
     {

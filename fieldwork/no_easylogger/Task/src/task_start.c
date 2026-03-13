@@ -4,12 +4,22 @@ static TaskHandle_t task_start_handle = NULL; /* 创建任务句柄 */
 static void task_start(void *params)
 {
     taskENTER_CRITICAL();
-    do_create_bsp_e2prom_task();
-    do_create_bsp_uart_task();
-    do_create_key_task();
+
+    // 输出
     do_create_display_task();
-    do_create_spi_rx_task();
-    do_create_algorithm_task();
+    // 计算
+    do_create_algorithm_task(); // DONE
+    // 按键输入
+    do_create_key_task();
+    // spi输出
+    do_create_spi_rx_task(); // DONE
+    // 测试数据
+    do_create_test_task();
+    // e2prom
+    do_create_bsp_e2prom_task();
+    // uart?
+    do_create_bsp_uart_task();
+    // watchdog
     do_create_watchdog_task();
 
     taskEXIT_CRITICAL(); // 提前退出临界区
