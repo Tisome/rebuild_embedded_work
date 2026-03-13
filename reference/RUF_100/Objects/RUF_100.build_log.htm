@@ -1,0 +1,334 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ��Vision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 111, LIC=LJWFW-Q5QFG-33VM1-CLFEW-L42UK-30SB8
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.28.0.0
+Toolchain Path:  D:\Keil5_MDK\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.36.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+C:\Users\11369\Desktop\gd32_p\code\RUF_100\RUF_100.uvprojx
+Project File Date:  10/27/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil5_MDK\ARM\ARMCC\Bin'
+*** Note: Rebuilding project, since 'Options->Output->Create Batch File' is selected.
+Rebuild target 'Target 1'
+compiling main.c...
+compiling gd32f30x_it.c...
+compiling systick.c...
+compiling dma.c...
+compiling spi.c...
+compiling gpio.c...
+compiling ruc.c...
+Core\ruc.c(15): warning:  #1-D: last line of file ends without a newline
+  }
+Core\ruc.c: 1 warning, 0 errors
+compiling menu.c...
+App\Src\menu.c(1): error:  #5: cannot open source input file "oled.h": No such file or directory
+  #include "oled.h" 
+App\Src\menu.c: 0 warnings, 1 error
+compiling menu_callbacks.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+App\Src\menu_callbacks.c(2): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+App\Src\menu_callbacks.c: 1 warning, 1 error
+compiling parameter_editor.c...
+.\App\Inc\parameter_editor.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+App\Src\parameter_editor.c(6): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+App\Src\parameter_editor.c: 2 warnings, 1 error
+compiling gd32f30x_adc.c...
+compiling gd32f30x_bkp.c...
+compiling gd32f30x_can.c...
+compiling gd32f30x_crc.c...
+compiling gd32f30x_ctc.c...
+compiling gd32f30x_dac.c...
+compiling gd32f30x_dbg.c...
+compiling gd32f30x_dma.c...
+compiling gd32f30x_enet.c...
+compiling gd32f30x_exmc.c...
+compiling gd32f30x_exti.c...
+compiling gd32f30x_fmc.c...
+compiling gd32f30x_fwdgt.c...
+compiling gd32f30x_gpio.c...
+compiling gd32f30x_i2c.c...
+compiling gd32f30x_misc.c...
+compiling gd32f30x_pmu.c...
+compiling gd32f30x_rcu.c...
+compiling gd32f30x_rtc.c...
+compiling gd32f30x_sdio.c...
+compiling gd32f30x_spi.c...
+compiling gd32f30x_timer.c...
+compiling gd32f30x_usart.c...
+compiling gd32f30x_wwdgt.c...
+compiling system_gd32f30x.c...
+assembling startup_gd32f30x_hd.s...
+compiling bsp_st7789_driver.c...
+BSP\ST7789\bsp_st7789_driver.c(200): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if ((x < 0) || (x >= ST7789_WIDTH) ||
+BSP\ST7789\bsp_st7789_driver.c(201): warning:  #186-D: pointless comparison of unsigned integer with zero
+        (y < 0) || (y >= ST7789_HEIGHT))        return 1;
+BSP\ST7789\bsp_st7789_driver.c(216): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if ((xEnd < 0) || (xEnd >= ST7789_WIDTH) ||
+BSP\ST7789\bsp_st7789_driver.c(217): warning:  #186-D: pointless comparison of unsigned integer with zero
+        (yEnd < 0) || (yEnd >= ST7789_HEIGHT))  return 1;
+BSP\ST7789\bsp_st7789_driver.c: 4 warnings, 0 errors
+compiling fonts.c...
+BSP\ST7789\fonts.c(1164): warning:  #1-D: last line of file ends without a newline
+  font_def_t Font_16x26_t = {16,26,Font16x26};
+BSP\ST7789\fonts.c: 1 warning, 0 errors
+compiling bsp_key.c...
+.\BSP\KEY\inc\bsp_key.h(36): error:  #5: cannot open source input file "cmsis_os.h": No such file or directory
+  #include "cmsis_os.h"
+BSP\KEY\src\bsp_key.c: 0 warnings, 1 error
+compiling task_start.c...
+compiling task_test.c...
+compiling task_display.c...
+Task\src\task_display.c(32): warning:  #1-D: last line of file ends without a newline
+  }
+Task\src\task_display.c: 1 warning, 0 errors
+compiling bsp_tasks_manager.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+compiling stream_buffer.c...
+compiling tasks.c...
+compiling timers.c...
+compiling heap_4.c...
+compiling port.c...
+compiling SEGGER_RTT_printf.c...
+compiling SEGGER_RTT.c...
+compiling elog_port.c...
+Middlerwares\EasyLogger\port\elog_port.c(93): warning:  #940-D: missing return statement at end of non-void function "elog_port_get_time" 
+  }
+Middlerwares\EasyLogger\port\elog_port.c(104): warning:  #940-D: missing return statement at end of non-void function "elog_port_get_p_info" 
+  }
+Middlerwares\EasyLogger\port\elog_port.c(115): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\EasyLogger\port\elog_port.c(115): warning:  #940-D: missing return statement at end of non-void function "elog_port_get_t_info" 
+  }
+Middlerwares\EasyLogger\port\elog_port.c: 4 warnings, 0 errors
+compiling elog.c...
+compiling elog_async.c...
+compiling elog_buf.c...
+compiling elog_utils.c...
+compiling main_menu.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\main_menu.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\main_menu.c: 1 warning, 1 error
+compiling menu1_diplay_rate.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu1_diplay_rate.c(53): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu1_diplay_rate.c: 2 warnings, 0 errors
+compiling menu1_display.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu1_display.c(3): error:  #5: cannot open source input file "oled.h": No such file or directory
+  #include "oled.h"
+Middlerwares\Menus\menu1_display.c: 1 warning, 1 error
+compiling menu1_history.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu1_history.c(23): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu1_history.c: 2 warnings, 0 errors
+compiling menu1_setup.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu1_setup.c(23): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu1_setup.c: 2 warnings, 0 errors
+compiling menu2_cal_setting.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_cal_setting.c: 1 warning, 0 errors
+compiling menu2_history_byday.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_history_byday.c(3): error:  #5: cannot open source input file "rtc.h": No such file or directory
+  #include "rtc.h"
+Middlerwares\Menus\menu2_history_byday.c: 1 warning, 1 error
+compiling menu2_history_bymonth.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_history_bymonth.c(5): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu2_history_bymonth.c: 2 warnings, 0 errors
+compiling menu2_history_byyear.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_history_byyear.c(7): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu2_history_byyear.c(7): warning:  #940-D: missing return statement at end of non-void function "menu2_history_byyear_handler" 
+  }
+Middlerwares\Menus\menu2_history_byyear.c: 3 warnings, 0 errors
+compiling menu2_history_total.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_history_total.c(6): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu2_history_total.c: 2 warnings, 0 errors
+compiling menu2_out_setting.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_out_setting.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu2_out_setting.c: 1 warning, 1 error
+compiling menu2_pip_setting.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_pip_setting.c(23): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu2_pip_setting.c: 2 warnings, 0 errors
+compiling menu2_sys_setting.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu2_sys_setting.c: 1 warning, 0 errors
+compiling menu3_4_20_ma.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_4_20_ma.c(3): error:  #5: cannot open source input file "tim.h": No such file or directory
+  #include "tim.h"
+Middlerwares\Menus\menu3_4_20_ma.c: 1 warning, 1 error
+compiling menu3_4_20_mh.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_4_20_mh.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_4_20_mh.c: 1 warning, 1 error
+compiling menu3_flow_rate_unit.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_flow_rate_unit.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_flow_rate_unit.c: 1 warning, 1 error
+compiling menu3_fluid_type.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_fluid_type.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_fluid_type.c: 1 warning, 1 error
+compiling menu3_material.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_material.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_material.c: 1 warning, 1 error
+compiling menu3_modbus_setting.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_modbus_setting.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_modbus_setting.c: 1 warning, 1 error
+compiling menu3_npn_setting.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_npn_setting.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_npn_setting.c: 1 warning, 1 error
+compiling menu3_outer_diameter.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\App\Inc\parameter_editor.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_outer_diameter.c(6): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu3_outer_diameter.c: 3 warnings, 0 errors
+compiling menu3_output_mode.c...
+Middlerwares\Menus\menu3_output_mode.c(1): error:  #5: cannot open source input file "tim.h": No such file or directory
+  #include "tim.h"
+Middlerwares\Menus\menu3_output_mode.c: 0 warnings, 1 error
+compiling menu3_rs485_set.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_rs485_set.c(3): error:  #5: cannot open source input file "usart.h": No such file or directory
+  #include "usart.h"
+Middlerwares\Menus\menu3_rs485_set.c: 1 warning, 1 error
+compiling menu3_scale_factor.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\App\Inc\parameter_editor.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_scale_factor.c(8): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu3_scale_factor.c: 3 warnings, 0 errors
+compiling menu3_set_zero.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_set_zero.c(4): error:  #5: cannot open source input file "oled.h": No such file or directory
+  #include "oled.h"
+Middlerwares\Menus\menu3_set_zero.c: 1 warning, 1 error
+compiling menu3_system_info.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_system_info.c(31): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu3_system_info.c(8): warning:  #177-D: variable "serial_str_sec"  was declared but never referenced
+      static char serial_str_sec[32]; // 确保缓冲区足够大
+Middlerwares\Menus\menu3_system_info.c: 3 warnings, 0 errors
+compiling menu3_time_set.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\BSP\KEY\inc\bsp_key.h(36): error:  #5: cannot open source input file "cmsis_os.h": No such file or directory
+  #include "cmsis_os.h"
+Middlerwares\Menus\menu3_time_set.c: 1 warning, 1 error
+compiling menu3_total_unit.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_total_unit.c(3): error:  #5: cannot open source input file "data.h": No such file or directory
+  #include "data.h"
+Middlerwares\Menus\menu3_total_unit.c: 1 warning, 1 error
+compiling menu3_wall_thickmess.c...
+.\App\Inc\menu.h(137): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\App\Inc\parameter_editor.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+Middlerwares\Menus\menu3_wall_thickmess.c(6): warning:  #1-D: last line of file ends without a newline
+  }
+Middlerwares\Menus\menu3_wall_thickmess.c: 3 warnings, 0 errors
+linking...
+.\Objects\RUF_100.axf: error: L6002U: Could not open file .\objects\menu.o: No such file or directory
+Finished: 0 information, 0 warning, 0 error and 1 fatal error messages.
+".\Objects\RUF_100.axf" - 21 Error(s), 58 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: GigaDevice
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F30x_DFP.2.5.0.pack
+                GigaDevice.GD32F30x_DFP.2.5.0
+                GigaDevice GD32F30x Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:21
+</pre>
+</body>
+</html>

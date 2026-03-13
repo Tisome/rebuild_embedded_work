@@ -1,0 +1,531 @@
+version: "4.1"
+name: RUF_100
+type: ARM
+deviceName: GD32F303CG
+packDir: .pack/GigaDevice/GD32F30x_DFP.2.0.0
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Core
+      files:
+        - path: Core/main.c
+        - path: Core/gd32f30x_it.c
+        - path: Core/systick.c
+        - path: Core/dma.c
+        - path: Core/spi.c
+        - path: Core/gpio.c
+        - path: Core/ruc.c
+      folders: []
+    - name: App
+      files:
+        - path: App/Src/menu.c
+        - path: App/Src/menu_callbacks.c
+        - path: App/Src/parameter_editor.c
+      folders: []
+    - name: Lib
+      files:
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_can.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c
+        - path: Lib/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c
+      folders: []
+    - name: startup
+      files:
+        - path: Lib/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c
+        - path: Lib/CMSIS/GD/GD32F30x/Source/ARM/startup_gd32f30x_hd.s
+      folders: []
+    - name: BSP
+      files:
+        - path: BSP/ST7789/bsp_st7789_driver.c
+        - path: BSP/ST7789/fonts.c
+        - path: BSP/KEY/src/bsp_key.c
+      folders: []
+    - name: Task
+      files:
+        - path: Task/src/task_start.c
+        - path: Task/src/task_test.c
+        - path: Task/src/task_display.c
+        - path: Task/src/bsp_tasks_manager.c
+      folders: []
+    - name: Middlewares
+      files: []
+      folders:
+        - name: FreeRTOS
+          files: []
+          folders:
+            - name: Src
+              files:
+                - path: Middlerwares/FreeRTOS/src/croutine.c
+                - path: Middlerwares/FreeRTOS/src/event_groups.c
+                - path: Middlerwares/FreeRTOS/src/list.c
+                - path: Middlerwares/FreeRTOS/src/queue.c
+                - path: Middlerwares/FreeRTOS/src/stream_buffer.c
+                - path: Middlerwares/FreeRTOS/src/tasks.c
+                - path: Middlerwares/FreeRTOS/src/timers.c
+              folders: []
+            - name: Port
+              files:
+                - path: Middlerwares/FreeRTOS/port/MemMang/heap_4.c
+                - path: Middlerwares/FreeRTOS/port/RVDS/ARM_CM4F/port.c
+              folders: []
+        - name: RTT
+          files:
+            - path: Middlerwares/SEGGER_RTT/SEGGER_RTT_Conf.h
+            - path: Middlerwares/SEGGER_RTT/SEGGER_RTT_printf.c
+            - path: Middlerwares/SEGGER_RTT/SEGGER_RTT.c
+          folders: []
+        - name: Easylogger
+          files:
+            - path: Middlerwares/EasyLogger/port/elog_port.c
+            - path: Middlerwares/EasyLogger/src/elog.c
+            - path: Middlerwares/EasyLogger/src/elog_async.c
+            - path: Middlerwares/EasyLogger/src/elog_buf.c
+            - path: Middlerwares/EasyLogger/src/elog_utils.c
+          folders: []
+        - name: Menus
+          files: []
+          folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 1405fc15da4668f06651cff1ffaaf0ab
+targets:
+  RUF_100:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_STDPERIPH_DRIVER
+        - __TARGET_FPU_VFP
+        - "__FPU_PRESENT "
+        - GD32F30X_XD
+      incList:
+        - .
+        - Lib/CMSIS
+        - Lib/CMSIS/GD/GD32F30x/Include
+        - Lib/CMSIS/GD/GD32F30x/Source/ARM
+        - Lib/GD32F30x_standard_peripheral/Include
+        - Core
+        - Code
+        - Task/inc
+        - Middlerwares/FreeRTOS
+        - Middlerwares/FreeRTOS/inc
+        - Middlerwares/FreeRTOS/port/RVDS/ARM_CM4F
+        - Middlerwares/SEGGER_RTT
+        - Middlerwares/EasyLogger/inc
+        - BSP/ST7789
+        - BSP
+        - Middlerwares/LVGL/lvgl
+        - Middlerwares/LVGL/lvgl/src
+        - Middlerwares/LVGL/lvgl/examples/porting
+        - Middlerwares/LVGL/lvgl/demos/widgets
+        - Middlerwares/LVGL
+        - BSP/KEY/inc
+        - App/Inc
+        - .cmsis/include
+        - RTE/_Target 1
+        - BSP/AT24C512/Inc
+        - BSP/IWDG/Inc
+        - BSP/TDC_GP22/Inc
+        - BSP/USART
+        - Middlerwares/Circular_buffer
+        - Middlerwares/Modbus
+      libList: []
+    excludeList:
+      - <virtual_root>/Middlewares/Menus/menu3_npn_setting.c
+      - <virtual_root>/Middlewares/Menus/menu3_time_set.c
+      - <virtual_root>/App/menu_callbacks.c
+      - <virtual_root>/Core/interrupt.c
+      - <virtual_root>/Middlewares/Menus/menu1_history.c
+      - <virtual_root>/Middlewares/Menus/menu2_history_byday.c
+      - <virtual_root>/Middlewares/Menus/menu2_history_bymonth.c
+      - <virtual_root>/Middlewares/Menus/menu2_history_byyear.c
+      - <virtual_root>/Middlewares/Menus/menu2_history_total.c
+      - <virtual_root>/Middlewares/Menus/menu3_fluid_type.c
+      - <virtual_root>/BSP/1
+      - <virtual_root>/Core/ruc.c
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks:
+            - name: elf to bin
+              abortAfterFailed: true
+              command: fromelf --bin -o ./build/RUF_100/RUF_100.bin ./build/RUF_100/RUF_100.axf
+              disable: false
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            gnu-extensions: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+        scatterFilePath: C:\Users\11369\Desktop\gd32_p\code\RUF_100\sct_files\RUF_100.sct
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x18000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: true
+      AC6:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 3
+          afterBuildTasks: []
+          asm-compiler:
+            $use: asm-auto
+            misc-controls: ""
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            language-c: c99
+            language-cpp: c++11
+            link-time-optimization: false
+            optimization: level-0
+          global:
+            output-debug-info: enable
+            use-microLIB: false
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            misc-controls: --diag_suppress=L6329
+            output-format: elf
+        scatterFilePath: <YOUR_SCATTER_FILE>.sct
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x5000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x08000000"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: GD32F303CCT6
+          vendor: GigaDevice
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: stlink
+        target: stm32f1x
+      STLink:
+        address: "0x08000000"
+        bin: ""
+        elFile: None
+        optionBytes: .eide/ruf_100.st.option.bytes.ini
+        otherCmds: ""
+        proType: SWD
+        resetMode: default
+        runAfterProgram: true
+        speed: 4000
+    uploader: JLink
+  Target 1:
+    cppPreprocessAttrs:
+      defineList:
+        - USE
+        - STDPERIPH
+        - DRIVER
+        - GD32F30X
+        - HD
+      incList:
+        - .
+        - Lib/CMSIS
+        - Lib/CMSIS/GD/GD32F30x/Include
+        - Lib/CMSIS/GD/GD32F30x/Source/ARM
+        - Lib/GD32F30x_standard_peripheral/Include
+        - Core
+        - Code
+        - Task/inc
+        - Middlerwares/FreeRTOS
+        - Middlerwares/FreeRTOS/inc
+        - Middlerwares/FreeRTOS/port/RVDS/ARM_CM4F
+        - Middlerwares/SEGGER_RTT
+        - Middlerwares/EasyLogger/inc
+        - BSP/ST7789
+        - BSP
+        - Middlerwares/LVGL/lvgl
+        - Middlerwares/LVGL/lvgl/src
+        - Middlerwares/LVGL/lvgl/examples/porting
+        - Middlerwares/LVGL/lvgl/demos/widgets
+        - Middlerwares/LVGL
+        - BSP/KEY/inc
+        - App/Inc
+        - .cmsis/include
+        - RTE/_Target 1
+      libList: []
+    excludeList: []
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler:
+            defines: []
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            gnu-extensions: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: false
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x18000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+      AC6:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options: ""
+        scatterFilePath: <YOUR_SCATTER_FILE>.sct
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x5000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x08000000"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: GD32F303CCT6
+          vendor: GigaDevice
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: stlink
+        target: stm32f1x
+      STLink:
+        address: "0x08000000"
+        bin: ""
+        elFile: None
+        optionBytes: .eide/ruf_100.st.option.bytes.ini
+        otherCmds: ""
+        proType: SWD
+        resetMode: default
+        runAfterProgram: true
+        speed: 4000
+    uploader: JLink

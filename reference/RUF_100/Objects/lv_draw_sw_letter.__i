@@ -1,0 +1,6 @@
+--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL
+-I.\RTE\_Target_1
+-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include
+-ID:\Keil5_MDK\ARM\CMSIS\Include
+-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE_STDPERIPH_DRIVER -DGD32F30X_HD
+-o .\objects\lv_draw_sw_letter.o --omf_browse .\objects\lv_draw_sw_letter.crf --depend .\objects\lv_draw_sw_letter.d "Middlerwares\LVGL\lvgl\src\draw\sw\lv_draw_sw_letter.c"

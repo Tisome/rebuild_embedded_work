@@ -1,0 +1,13 @@
+#include "app_config.h"
+
+/* FPGA中断外部中断相关宏定义 */
+// RCT6上就用PA0吧，到时候和FPGA连接一下试试看
+
+#define FPGA_INT_GPIO_PORT GPIOA
+#define FPGA_INT_GPIO_PIN GPIO_PIN_0
+#define FPGA_INT_GPIO_CLK RCU_GPIOA
+#define FPGA_INT_EXTI_LINE EXTI_0
+#define FPGA_INT_EXTI_PORT_SOURCE GPIO_PORT_SOURCE_GPIOA
+#define FPGA_INT_EXTI_PIN_SOURCE GPIO_PIN_SOURCE_0
+#define FPGA_INT_GPIO_IRQn EXTI0_IRQn
+#define FPGA_INT_IRQHandler EXTI0_IRQHandler

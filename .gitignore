@@ -1,0 +1,17 @@
+# build output
+**/build/
+**/Debug/
+**/Release/
+
+# object files
+*.o
+*.d
+*.obj
+
+# binary files
+#*.elf
+#*.bin
+#*.hex
+#*.axf
+#*.map
+

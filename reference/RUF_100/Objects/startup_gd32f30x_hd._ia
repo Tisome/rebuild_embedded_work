@@ -1,0 +1,6 @@
+--cpu Cortex-M4.fp -g --apcs=interwork 
+-I.\RTE\_Target_1
+-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include
+-ID:\Keil5_MDK\ARM\CMSIS\Include
+--pd "__UVISION_VERSION SETA 528" --pd "GD32F30X_XD SETA 1"
+--list .\listings\startup_gd32f30x_hd.lst --xref -o .\objects\startup_gd32f30x_hd.o --depend .\objects\startup_gd32f30x_hd.d "Lib\CMSIS\GD\GD32F30x\Source\ARM\startup_gd32f30x_hd.s"

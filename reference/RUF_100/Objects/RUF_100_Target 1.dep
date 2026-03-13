@@ -1,0 +1,1710 @@
+Dependencies for Project 'RUF_100', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Core\main.c)(0x68FB46EE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (Core\main.h)(0x68FB4A24)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (Core\systick.h)(0x68FA2036)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (Core\rcu.h)(0x68FA1693)
+I (Core\gpio.h)(0x68FA16AB)
+I (Core\dma.h)(0x68FA1773)
+I (Core\spi.h)(0x68FB1452)
+I (.\Task\inc\task_manager.h)(0x68F9E20C)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\semphr.h)(0x68F907AE)
+F (.\Core\gd32f30x_it.c)(0x68FA2376)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_it.o --omf_browse .\objects\gd32f30x_it.crf --depend .\objects\gd32f30x_it.d)
+I (Core\gd32f30x_it.h)(0x61CC215B)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (Core\main.h)(0x68FB4A24)
+I (Core\systick.h)(0x68FA2036)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+F (.\Core\systick.c)(0x68FA2376)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (Core\systick.h)(0x68FA2036)
+F (.\Core\dma.c)(0x68FA1788)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\dma.o --omf_browse .\objects\dma.crf --depend .\objects\dma.d)
+I (Core\dma.h)(0x68FA1773)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Core\spi.c)(0x68FED4A2)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (Core\spi.h)(0x68FB1452)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+F (.\Core\gpio.c)(0x68FB4876)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+I (Core\gpio.h)(0x68FA16AB)
+I (Core\main.h)(0x68FB4A24)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (Core\systick.h)(0x68FA2036)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+F (.\Core\ruc.c)(0x68F9FB5E)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\ruc.o --omf_browse .\objects\ruc.crf --depend .\objects\ruc.d)
+I (Core\rcu.h)(0x68FA1693)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\App\Src\menu.c)(0x68872E03)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu.o --omf_browse .\objects\menu.crf --depend .\objects\menu.d)
+F (.\App\Src\menu_callbacks.c)(0x68A44334)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu_callbacks.o --omf_browse .\objects\menu_callbacks.crf --depend .\objects\menu_callbacks.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\App\Src\parameter_editor.c)(0x68EA2F3A)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\parameter_editor.o --omf_browse .\objects\parameter_editor.crf --depend .\objects\parameter_editor.d)
+I (.\App\Inc\parameter_editor.h)(0x68873333)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_adc.c)(0x65DC57E3)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_adc.o --omf_browse .\objects\gd32f30x_adc.crf --depend .\objects\gd32f30x_adc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_bkp.c)(0x65DC57E8)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_bkp.o --omf_browse .\objects\gd32f30x_bkp.crf --depend .\objects\gd32f30x_bkp.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_can.c)(0x65DC57EF)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_can.o --omf_browse .\objects\gd32f30x_can.crf --depend .\objects\gd32f30x_can.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_crc.c)(0x65DC57F4)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_crc.o --omf_browse .\objects\gd32f30x_crc.crf --depend .\objects\gd32f30x_crc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_ctc.c)(0x65DC57F8)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_ctc.o --omf_browse .\objects\gd32f30x_ctc.crf --depend .\objects\gd32f30x_ctc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_dac.c)(0x65DC57FB)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_dac.o --omf_browse .\objects\gd32f30x_dac.crf --depend .\objects\gd32f30x_dac.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_dbg.c)(0x65DC57FF)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_dbg.o --omf_browse .\objects\gd32f30x_dbg.crf --depend .\objects\gd32f30x_dbg.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_dma.c)(0x65DC5802)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_dma.o --omf_browse .\objects\gd32f30x_dma.crf --depend .\objects\gd32f30x_dma.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_enet.c)(0x65DC5806)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_enet.o --omf_browse .\objects\gd32f30x_enet.crf --depend .\objects\gd32f30x_enet.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_exmc.c)(0x65DC580A)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_exmc.o --omf_browse .\objects\gd32f30x_exmc.crf --depend .\objects\gd32f30x_exmc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_exti.c)(0x65DC580F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_exti.o --omf_browse .\objects\gd32f30x_exti.crf --depend .\objects\gd32f30x_exti.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_fmc.c)(0x65DC5813)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_fmc.o --omf_browse .\objects\gd32f30x_fmc.crf --depend .\objects\gd32f30x_fmc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_fwdgt.c)(0x65DC5818)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_fwdgt.o --omf_browse .\objects\gd32f30x_fwdgt.crf --depend .\objects\gd32f30x_fwdgt.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_gpio.c)(0x65DC581C)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_gpio.o --omf_browse .\objects\gd32f30x_gpio.crf --depend .\objects\gd32f30x_gpio.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_i2c.c)(0x65DC5820)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_i2c.o --omf_browse .\objects\gd32f30x_i2c.crf --depend .\objects\gd32f30x_i2c.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_misc.c)(0x65DC5824)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_misc.o --omf_browse .\objects\gd32f30x_misc.crf --depend .\objects\gd32f30x_misc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_pmu.c)(0x65DC5827)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_pmu.o --omf_browse .\objects\gd32f30x_pmu.crf --depend .\objects\gd32f30x_pmu.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_rcu.c)(0x65DC582C)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_rcu.o --omf_browse .\objects\gd32f30x_rcu.crf --depend .\objects\gd32f30x_rcu.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_rtc.c)(0x65DC5830)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_rtc.o --omf_browse .\objects\gd32f30x_rtc.crf --depend .\objects\gd32f30x_rtc.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_sdio.c)(0x65DC5835)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_sdio.o --omf_browse .\objects\gd32f30x_sdio.crf --depend .\objects\gd32f30x_sdio.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_spi.c)(0x65DC5838)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_spi.o --omf_browse .\objects\gd32f30x_spi.crf --depend .\objects\gd32f30x_spi.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_timer.c)(0x65DC583C)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_timer.o --omf_browse .\objects\gd32f30x_timer.crf --depend .\objects\gd32f30x_timer.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_usart.c)(0x65DC5843)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_usart.o --omf_browse .\objects\gd32f30x_usart.crf --depend .\objects\gd32f30x_usart.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\GD32F30x_standard_peripheral\Source\gd32f30x_wwdgt.c)(0x65DC5849)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\gd32f30x_wwdgt.o --omf_browse .\objects\gd32f30x_wwdgt.crf --depend .\objects\gd32f30x_wwdgt.d)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\CMSIS\GD\GD32F30x\Source\system_gd32f30x.c)(0x65DC4082)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\system_gd32f30x.o --omf_browse .\objects\system_gd32f30x.crf --depend .\objects\system_gd32f30x.d)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+F (.\Lib\CMSIS\GD\GD32F30x\Source\ARM\startup_gd32f30x_hd.s)(0x68F99F64)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 528" --pd "GD32F30X_XD SETA 1"--list .\listings\startup_gd32f30x_hd.lst --xref -o .\objects\startup_gd32f30x_hd.o --depend .\objects\startup_gd32f30x_hd.d)
+F (.\BSP\ST7789\bsp_st7789_driver.c)(0x68FEE3F0)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\bsp_st7789_driver.o --omf_browse .\objects\bsp_st7789_driver.crf --depend .\objects\bsp_st7789_driver.d)
+I (BSP\ST7789\bsp_st7789_driver.h)(0x677948C4)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (BSP\ST7789\fonts.h)(0x676EC34D)
+I (BSP\ST7789\st7789_reg_define.h)(0x68FB1C14)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+F (.\BSP\ST7789\fonts.c)(0x676EC34D)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\fonts.o --omf_browse .\objects\fonts.crf --depend .\objects\fonts.d)
+I (BSP\ST7789\fonts.h)(0x676EC34D)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+F (.\BSP\KEY\src\bsp_key.c)(0x68D4E5C2)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\bsp_key.o --omf_browse .\objects\bsp_key.crf --depend .\objects\bsp_key.d)
+I (.\BSP\KEY\inc\bsp_key.h)(0x68D4E58F)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Core\main.h)(0x68FB4A24)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (.\Core\systick.h)(0x68FA2036)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+F (.\Task\src\task_start.c)(0x68FB1002)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\task_start.o --omf_browse .\objects\task_start.crf --depend .\objects\task_start.d)
+I (.\Task\inc\task_manager.h)(0x68F9E20C)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\semphr.h)(0x68F907AE)
+F (.\Task\src\task_test.c)(0x68FAFECF)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\task_test.o --omf_browse .\objects\task_test.crf --depend .\objects\task_test.d)
+I (.\Task\inc\task_manager.h)(0x68F9E20C)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\semphr.h)(0x68F907AE)
+I (.\Core\main.h)(0x68FB4A24)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (.\Core\systick.h)(0x68FA2036)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+F (.\Task\src\task_display.c)(0x68FB49F7)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\task_display.o --omf_browse .\objects\task_display.crf --depend .\objects\task_display.d)
+I (.\Task\inc\task_manager.h)(0x68F9E20C)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\semphr.h)(0x68F907AE)
+I (.\Core\main.h)(0x68FB4A24)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (.\Core\systick.h)(0x68FA2036)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (.\BSP\ST7789\bsp_st7789_driver.h)(0x677948C4)
+I (.\BSP\ST7789\fonts.h)(0x676EC34D)
+I (.\BSP\ST7789\bsp_st7789_link.h)(0x68FAFC8D)
+I (.\Core\dma.h)(0x68FA1773)
+I (.\Core\spi.h)(0x68FB1452)
+I (.\BSP\ST7789\st7789_reg_define.h)(0x68FB1C14)
+I (.\BSP\link_total.h)(0x68FB44B3)
+F (.\Task\src\bsp_tasks_manager.c)(0x68FA1738)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\bsp_tasks_manager.o --omf_browse .\objects\bsp_tasks_manager.crf --depend .\objects\bsp_tasks_manager.d)
+I (.\Task\inc\task_manager.h)(0x68F9E20C)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\semphr.h)(0x68F907AE)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+F (.\Middlerwares\FreeRTOS\src\croutine.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\croutine.o --omf_browse .\objects\croutine.crf --depend .\objects\croutine.d)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\croutine.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\src\event_groups.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\event_groups.o --omf_browse .\objects\event_groups.crf --depend .\objects\event_groups.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\timers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\event_groups.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\src\list.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\src\queue.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\queue.o --omf_browse .\objects\queue.crf --depend .\objects\queue.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\src\stream_buffer.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\stream_buffer.o --omf_browse .\objects\stream_buffer.crf --depend .\objects\stream_buffer.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\stream_buffer.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\src\tasks.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\tasks.o --omf_browse .\objects\tasks.crf --depend .\objects\tasks.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\timers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\stack_macros.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\src\timers.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\timers.o --omf_browse .\objects\timers.crf --depend .\objects\timers.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\queue.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\timers.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\port\MemMang\heap_4.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\heap_4.o --omf_browse .\objects\heap_4.crf --depend .\objects\heap_4.d)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+F (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\port.c)(0x68F907AE)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\task.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\list.h)(0x68F907AE)
+F (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)()
+F (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_printf.c)(0x6790E40B)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\segger_rtt_printf.o --omf_browse .\objects\segger_rtt_printf.crf --depend .\objects\segger_rtt_printf.d)
+I (Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+F (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.c)(0x6790E40A)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\segger_rtt.o --omf_browse .\objects\segger_rtt.crf --depend .\objects\segger_rtt.d)
+I (Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+F (.\Middlerwares\EasyLogger\port\elog_port.c)(0x686B3165)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\elog_port.o --omf_browse .\objects\elog_port.crf --depend .\objects\elog_port.d)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+F (.\Middlerwares\EasyLogger\src\elog.c)(0x68F9CF32)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\elog.o --omf_browse .\objects\elog.crf --depend .\objects\elog.d)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\EasyLogger\src\elog_async.c)(0x676CF03F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\elog_async.o --omf_browse .\objects\elog_async.crf --depend .\objects\elog_async.d)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+F (.\Middlerwares\EasyLogger\src\elog_buf.c)(0x676CF03F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\elog_buf.o --omf_browse .\objects\elog_buf.crf --depend .\objects\elog_buf.d)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+F (.\Middlerwares\EasyLogger\src\elog_utils.c)(0x676CF03F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\elog_utils.o --omf_browse .\objects\elog_utils.crf --depend .\objects\elog_utils.d)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\main_menu.c)(0x68C94B56)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\main_menu.o --omf_browse .\objects\main_menu.crf --depend .\objects\main_menu.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu1_diplay_rate.c)(0x68F7406B)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu1_diplay_rate.o --omf_browse .\objects\menu1_diplay_rate.crf --depend .\objects\menu1_diplay_rate.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu1_display.c)(0x68F88A2C)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu1_display.o --omf_browse .\objects\menu1_display.crf --depend .\objects\menu1_display.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu1_history.c)(0x6891B666)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu1_history.o --omf_browse .\objects\menu1_history.crf --depend .\objects\menu1_history.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu1_setup.c)(0x68907CDD)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu1_setup.o --omf_browse .\objects\menu1_setup.crf --depend .\objects\menu1_setup.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_cal_setting.c)(0x68943F25)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_cal_setting.o --omf_browse .\objects\menu2_cal_setting.crf --depend .\objects\menu2_cal_setting.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_history_byday.c)(0x68667ACA)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_history_byday.o --omf_browse .\objects\menu2_history_byday.crf --depend .\objects\menu2_history_byday.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_history_bymonth.c)(0x68667C4B)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_history_bymonth.o --omf_browse .\objects\menu2_history_bymonth.crf --depend .\objects\menu2_history_bymonth.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_history_byyear.c)(0x68667C4B)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_history_byyear.o --omf_browse .\objects\menu2_history_byyear.crf --depend .\objects\menu2_history_byyear.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_history_total.c)(0x68667C4B)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_history_total.o --omf_browse .\objects\menu2_history_total.crf --depend .\objects\menu2_history_total.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_out_setting.c)(0x68F7246F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_out_setting.o --omf_browse .\objects\menu2_out_setting.crf --depend .\objects\menu2_out_setting.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_pip_setting.c)(0x689073EF)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_pip_setting.o --omf_browse .\objects\menu2_pip_setting.crf --depend .\objects\menu2_pip_setting.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu2_sys_setting.c)(0x68907D8A)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu2_sys_setting.o --omf_browse .\objects\menu2_sys_setting.crf --depend .\objects\menu2_sys_setting.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_4_20_ma.c)(0x68943BD1)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_4_20_ma.o --omf_browse .\objects\menu3_4_20_ma.crf --depend .\objects\menu3_4_20_ma.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_4_20_mh.c)(0x68907D84)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_4_20_mh.o --omf_browse .\objects\menu3_4_20_mh.crf --depend .\objects\menu3_4_20_mh.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_flow_rate_unit.c)(0x68907D82)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_flow_rate_unit.o --omf_browse .\objects\menu3_flow_rate_unit.crf --depend .\objects\menu3_flow_rate_unit.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_fluid_type.c)(0x68907D7C)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_fluid_type.o --omf_browse .\objects\menu3_fluid_type.crf --depend .\objects\menu3_fluid_type.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_material.c)(0x68E7227B)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_material.o --omf_browse .\objects\menu3_material.crf --depend .\objects\menu3_material.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_modbus_setting.c)(0x68EDE19E)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_modbus_setting.o --omf_browse .\objects\menu3_modbus_setting.crf --depend .\objects\menu3_modbus_setting.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_npn_setting.c)(0x68F7246F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_npn_setting.o --omf_browse .\objects\menu3_npn_setting.crf --depend .\objects\menu3_npn_setting.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_outer_diameter.c)(0x68667C57)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_outer_diameter.o --omf_browse .\objects\menu3_outer_diameter.crf --depend .\objects\menu3_outer_diameter.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\App\Inc\parameter_editor.h)(0x68873333)
+F (.\Middlerwares\Menus\menu3_output_mode.c)(0x68F7246F)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_output_mode.o --omf_browse .\objects\menu3_output_mode.crf --depend .\objects\menu3_output_mode.d)
+F (.\Middlerwares\Menus\menu3_rs485_set.c)(0x6880C804)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_rs485_set.o --omf_browse .\objects\menu3_rs485_set.crf --depend .\objects\menu3_rs485_set.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_scale_factor.c)(0x68676CE2)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_scale_factor.o --omf_browse .\objects\menu3_scale_factor.crf --depend .\objects\menu3_scale_factor.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\App\Inc\parameter_editor.h)(0x68873333)
+F (.\Middlerwares\Menus\menu3_set_zero.c)(0x68EF0E87)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_set_zero.o --omf_browse .\objects\menu3_set_zero.crf --depend .\objects\menu3_set_zero.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_system_info.c)(0x68907D74)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_system_info.o --omf_browse .\objects\menu3_system_info.crf --depend .\objects\menu3_system_info.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_time_set.c)(0x6890863A)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_time_set.o --omf_browse .\objects\menu3_time_set.crf --depend .\objects\menu3_time_set.d)
+I (.\Core\main.h)(0x68FB4A24)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x65DC5858)
+I (.\Lib\CMSIS\core_cm4.h)(0x61CC215C)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (.\Lib\CMSIS\core_cmInstr.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cmFunc.h)(0x61CC215C)
+I (.\Lib\CMSIS\core_cm4_simd.h)(0x61CC215C)
+I (.\Lib\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x65DC4082)
+I (.\Core\gd32f30x_libopt.h)(0x61CC2166)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x65DC57A9)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x65DC5742)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x65DC5756)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x65DC575B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x65DC5762)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x65DC5767)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x65DC5773)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x65DC5778)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x65DC5785)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x65DC578A)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x65DC578F)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x65DC5793)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x65DC5797)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x65DC57A0)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x65DC574D)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x65DC57A4)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x65DC57AE)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x65DC57B2)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x65DC57B6)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x65DC57BF)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x65DC57BA)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x65DC579B)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x65DC577C)
+I (.\Lib\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x65DC5780)
+I (.\Core\systick.h)(0x68FA2036)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\inc\FreeRTOS.h)(0x68F907AE)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (.\Middlerwares\FreeRTOS\FreeRTOSConfig.h)(0x68FB475B)
+I (.\Middlerwares\FreeRTOS\inc\projdefs.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\portable.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\deprecated_definitions.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h)(0x68F907AE)
+I (.\Middlerwares\FreeRTOS\inc\mpu_wrappers.h)(0x68F907AE)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT.h)(0x68F9CC1D)
+I (.\Middlerwares\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x6790E40A)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
+I (.\Middlerwares\EasyLogger\inc\elog.h)(0x68F9CF45)
+I (.\Middlerwares\EasyLogger\inc\elog_cfg.h)(0x686B2D61)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (.\BSP\KEY\inc\bsp_key.h)(0x68D4E58F)
+F (.\Middlerwares\Menus\menu3_total_unit.c)(0x68907D6E)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_total_unit.o --omf_browse .\objects\menu3_total_unit.crf --depend .\objects\menu3_total_unit.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+F (.\Middlerwares\Menus\menu3_wall_thickmess.c)(0x68907D66)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\Lib\CMSIS -I .\Lib\CMSIS\GD\GD32F30x\Include -I .\Lib\CMSIS\GD\GD32F30x\Source\ARM -I .\Lib\GD32F30x_standard_peripheral\Include -I .\Core -I .\Code -I .\Task\inc -I .\Middlerwares\FreeRTOS -I .\Middlerwares\FreeRTOS\inc -I .\Middlerwares\FreeRTOS\port\RVDS\ARM_CM4F -I .\Middlerwares\SEGGER_RTT -I .\Middlerwares\EasyLogger\inc -I .\BSP\ST7789 -I .\BSP -I .\Middlerwares\LVGL\lvgl -I .\Middlerwares\LVGL\lvgl\src -I .\Middlerwares\LVGL\lvgl\examples\porting -I .\Middlerwares\LVGL\lvgl\demos\widgets -I .\Middlerwares\LVGL -I .\BSP\KEY\inc -I .\App\Inc-I.\RTE\_Target_1-ID:\Keil5_MDK\Packs\GigaDevice\GD32F30x_DFP\2.5.0\Device\Include-ID:\Keil5_MDK\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DGD32F30X_XD -DUSE -DSTDPERIPH -DDRIVER -DGD32F30X -DHD-o .\objects\menu3_wall_thickmess.o --omf_browse .\objects\menu3_wall_thickmess.crf --depend .\objects\menu3_wall_thickmess.d)
+I (.\App\Inc\menu.h)(0x68C7A55E)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil5_MDK\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (.\App\Inc\parameter_editor.h)(0x68873333)

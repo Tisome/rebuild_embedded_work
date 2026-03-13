@@ -1,0 +1,250 @@
+version: "4.1"
+name: atk_f103
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Startup
+      files:
+        - path: Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/arm/startup_stm32f103xe.s
+      folders: []
+    - name: User
+      files:
+        - path: User/main.c
+        - path: Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
+        - path: User/stm32f1xx_it.c
+        - path: User/FreeRTOSConfig.h
+      folders:
+        - name: Thread
+          files:
+            - path: User/Thread/SPI_RX/SPI_RxTask.c
+            - path: User/Thread/SPI_RX/SPI_RxTask.h
+            - path: User/Thread/SHOW_UI/show_UI.c
+            - path: User/Thread/SHOW_UI/show_UI.h
+            - path: User/Thread/KEY_FILTER/keyFilerTask.c
+            - path: User/Thread/KEY_FILTER/keyFilterTask.h
+            - path: User/Thread/FakeFPGA/fakeFPGATask.c
+            - path: User/Thread/FakeFPGA/fakeFPGATask.h
+            - path: User/Thread/DEMO/RUF_X_demo.c
+            - path: User/Thread/DEMO/RUF_X_demo.h
+            - path: User/Thread/CONFIG_TUBE/configTubeTask.c
+            - path: User/Thread/CONFIG_TUBE/configTubeTask.h
+            - path: User/Thread/ALGO/algorithmTask.c
+            - path: User/Thread/ALGO/algorithmTask.h
+          folders: []
+        - name: Port
+          files:
+            - path: User/MCU_Port/SPI/spi.c
+            - path: User/MCU_Port/SPI/spi.h
+            - path: User/MCU_Port/EXTI/exti.c
+            - path: User/MCU_Port/EXTI/exti.h
+            - path: User/MCU_Port/DMA/dma.c
+            - path: User/MCU_Port/DMA/dma.h
+          folders: []
+        - name: CONFIG
+          files:
+            - path: User/CONFIG/app_config.h
+          folders: []
+    - name: Drivers
+      files: []
+      folders:
+        - name: SYSTEM
+          files:
+            - path: Drivers/SYSTEM/delay/delay.c
+            - path: Drivers/SYSTEM/sys/sys.c
+            - path: Drivers/SYSTEM/usart/usart.c
+          folders: []
+        - name: STM32F1xx_HAL_Driver
+          files:
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+            - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
+          folders: []
+        - name: BSP
+          files:
+            - path: Drivers/BSP/LED/led.c
+            - path: Drivers/BSP/LCD/lcd.c
+            - path: Drivers/BSP/KEY/key.c
+            - path: Drivers/BSP/SRAM/sram.c
+            - path: Drivers/BSP/TIMER/btim.c
+          folders: []
+    - name: Middlewares
+      files: []
+      folders:
+        - name: MALLOC
+          files:
+            - path: Middlewares/MALLOC/malloc.c
+          folders: []
+        - name: FreeRTOS_CORE
+          files:
+            - path: Middlewares/FreeRTOS/croutine.c
+            - path: Middlewares/FreeRTOS/event_groups.c
+            - path: Middlewares/FreeRTOS/list.c
+            - path: Middlewares/FreeRTOS/queue.c
+            - path: Middlewares/FreeRTOS/stream_buffer.c
+            - path: Middlewares/FreeRTOS/tasks.c
+            - path: Middlewares/FreeRTOS/timers.c
+          folders: []
+        - name: FreeRTOS_PORT
+          files:
+            - path: Middlewares/FreeRTOS/portable/MemMang/heap_4.c
+            - path: Middlewares/FreeRTOS/portable/RVDS/ARM_CM3/port.c
+          folders: []
+    - name: Readme
+      files:
+        - path: readme.txt
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 7722d50de192d607ff11c7a664b6ce00
+targets:
+  FreeRTOS:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_HAL_DRIVER
+        - STM32F103xE
+      incList:
+        - Drivers/CMSIS/Device/ST/STM32F1xx/Include
+        - Drivers/STM32F1xx_HAL_Driver/Inc
+        - Drivers/CMSIS/Include
+        - Drivers
+        - User
+        - Middlewares
+        - Middlewares/FreeRTOS/include
+        - Middlewares/FreeRTOS/portable/RVDS/ARM_CM3
+        - .cmsis/include
+        - Projects/MDK-ARM/RTE/_FreeRTOS
+      libList: []
+    excludeList: []
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M3
+        floatingPointHardware: none
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler:
+            defines: []
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: false
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x80000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+    uploader: JLink
