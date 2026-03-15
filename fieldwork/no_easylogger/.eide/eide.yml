@@ -20,7 +20,6 @@ virtualFolder:
         - path: User/main.c
         - path: Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
         - path: User/stm32f1xx_it.c
-        - path: User/freertos_demo.c
         - path: User/FreeRTOSConfig.h
       folders: []
     - name: Drivers

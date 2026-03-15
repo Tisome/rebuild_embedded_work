@@ -14,7 +14,7 @@ static void task_start(void *params)
     // spi输出
     do_create_spi_rx_task(); // DONE
     // 测试数据
-    do_create_test_task();
+    do_create_test_task(); // DONE
     // e2prom
     do_create_bsp_e2prom_task();
     // uart?
