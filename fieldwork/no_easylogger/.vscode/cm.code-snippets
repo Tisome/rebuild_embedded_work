@@ -26,9 +26,15 @@
 	// 	"description": "Insert test block"
 	// }
 	"long_comment_interval":{
-		"prefix": "lc",
+		"prefix": "lci",
 		"body":[
 			"/*************************  *************************/"
+		]
+	},
+	"short_comment_interval":{
+		"prefix":"sci",
+		"body":[
+			"/*  */"
 		]
 	}
 

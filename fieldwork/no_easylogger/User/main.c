@@ -18,9 +18,9 @@
  ****************************************************************************************************
  */
 
-#include "./SYSTEM/delay/delay.h"
-#include "./SYSTEM/sys/sys.h"
-#include "./SYSTEM/usart/usart.h"
+#include "delay.h"
+#include "sys.h"
+#include "usart.h"
 
 // #include "./BSP/LED/led.h"
 // #include "./BSP/LCD/lcd.h"

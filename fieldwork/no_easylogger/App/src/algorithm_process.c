@@ -9,7 +9,7 @@
 #define LOG_LVL ELOG_LVL_VERBOSE
 
 extern kalman_t kf;
-extern Alarm_t g_alarm;
+extern ALARM_TYPE g_alarm;
 
 bool algorithm_process_group(Pipe_Parameters_t *para,
                              Pipe_algo_state_t *state,

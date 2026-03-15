@@ -101,7 +101,7 @@ double calc_t_wall_ns(Pipe_Parameters_t *para)
  * - L1 = pipe_dn : mm
  * - 输出 v : m/s
  */
-static double vel_calc_from_dt(const Pipe_Parameters_t *para,
+static double vel_calc_from_dt(Pipe_Parameters_t *para,
                                double t1_ns,
                                double t2_ns,
                                double dt_ns)
@@ -144,9 +144,9 @@ static double vel_calc_from_dt(const Pipe_Parameters_t *para,
  *  - 每 FLOW_WINDOW_STEP（5）次更新输出一次
  *  - 输出时对窗口排序，按箱线图（IQR）剔除离群值，再求平均
  */
-static bool flow_window_add(Pipe_algo_state_t *state,
-                            double v_raw,
-                            double v_avg)
+bool flow_window_add(Pipe_algo_state_t *state,
+                     double v_raw,
+                     double v_avg)
 {
     state->window_buf[state->window_idx] = v_raw;
     state->window_idx = (uint8_t)((state->window_idx + 1U) % FLOW_WINDOW_LEN);

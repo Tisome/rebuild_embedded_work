@@ -1,4 +1,5 @@
 #include "data.h"
+#include "elog.h"
 
 #include <stdbool.h>
 
@@ -78,7 +79,7 @@ void parameter_init(void)
             .speed_unit_type = SPEED_UNIT_M_P_S,
             .rate_unit_type = RATE_UNIT_L_P_MIN};
 
-#if USE_EEPROM
+#if USE_E2PROM
     if (LoadParameters(&g_parameters) != E2PROM_OK)
     {
         g_parameters = default_pipe_parameters;
