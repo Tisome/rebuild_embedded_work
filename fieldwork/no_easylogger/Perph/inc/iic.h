@@ -2,7 +2,6 @@
 #define __IIC_H
 
 #include "sys.h"
-#include "stm32f1xx_hal_i2c.h"
 
 /* I2C1 引脚定义（默认 PB6=SCL, PB7=SDA） */
 #define IIC1_SCL_GPIO_PORT GPIOB
@@ -36,6 +35,11 @@
         __HAL_RCC_I2C1_CLK_ENABLE(); \
     } while (0)
 
+#define E2PROM_IIC_CLK_ENABLE()       \
+    do {                              \
+        __HAL_RCC_I2C1_CLK_DISABLE(); \
+    } while (0)
+
 #define E2PROM_IIC_SCL_GPIO_PORT       IIC1_SCL_GPIO_PORT
 #define E2PROM_IIC_SCL_GPIO_PIN        IIC1_SCL_GPIO_PIN
 #define E2PROM_IIC_SCL_GPIO_CLK_ENABLE IIC1_SCL_GPIO_CLK_ENABLE
@@ -50,31 +54,71 @@ extern I2C_HandleTypeDef hi2c1;
 
 typedef enum {
     I2C_OK              = 0, /* R/W successfully */
-    I2C_ERROR           = 1, /* RUNTIME ERROR WITHOUR CASE MATCHED */
-    I2C_ERROR_TIMEOUT   = 2, /* R/W TIME OUT */
-    I2C_ERROR_RESOURCE  = 3, /* I2C RESOURCE WRONG */
-    I2C_ERROR_PARAMETER = 4, /* INPUT ARG WRONG */
-    I2C_RESERVED_1      = 5,
-    I2C_RESERVED_2      = 6,
-    I2C_RESERVED_3      = 7
+    I2C_ERROR           = 1, /* HAL_ERROR */
+    I2C_BUSY            = 2, /* HAL BUSY */
+    I2C_TIMEOUT         = 3, /* HAL R/W TIME OUT */
+    I2C_ERROR_RESOURCE  = 4, /* I2C RESOURCE WRONG */
+    I2C_ERROR_PARAMETER = 5, /* INPUT ARG WRONG */
+    I2C_RESERVED_1      = 6,
+    I2C_RESERVED_2      = 7
 } iic_status_t;
 
-void iic1_init(uint32_t clock_speed_hz);
+iic_status_t iic_init(I2C_HandleTypeDef *hi2c,
+                      I2C_TypeDef *instance,
+                      uint32_t clock_speed_hz);
 
-iic_status_t iic1_is_ready(uint16_t dev_addr_7bit, uint32_t trials, uint32_t timeout_ms);
-iic_status_t iic1_mem_write(I2C_HandleTypeDef *h2ci,
-                            uint16_t dev_addr_7bit,
-                            uint16_t mem_addr,
-                            uint16_t mem_addr_size,
-                            const uint8_t *buf,
-                            uint16_t len,
-                            uint32_t timeout_ms);
-iic_status_t iic1_mem_read(I2C_HandleTypeDef *h2ci,
+iic_status_t iic_deinit(I2C_HandleTypeDef *hi2c);
+
+iic_status_t iic_is_ready(I2C_HandleTypeDef *hi2c,
+                          uint16_t dev_addr_7bit,
+                          uint32_t trials,
+                          uint32_t timeout_ms);
+
+iic_status_t iic_mem_write(I2C_HandleTypeDef *h2ci,
                            uint16_t dev_addr_7bit,
                            uint16_t mem_addr,
                            uint16_t mem_addr_size,
-                           uint8_t *buf,
+                           const uint8_t *buf,
                            uint16_t len,
                            uint32_t timeout_ms);
+
+iic_status_t iic_mem_read(I2C_HandleTypeDef *h2ci,
+                          uint16_t dev_addr_7bit,
+                          uint16_t mem_addr,
+                          uint16_t mem_addr_size,
+                          uint8_t *buf,
+                          uint16_t len,
+                          uint32_t timeout_ms);
+
+typedef struct
+{
+    void *hi2c;
+    iic_status_t (*pf_iic_init)(void *hi2c,
+                                void *instance,
+                                uint32_t clock_speed_hz);
+
+    iic_status_t (*pf_iic_deinit)(void *hi2c);
+
+    iic_status_t (*pf_iic_is_ready)(void *hi2c,
+                                    uint16_t dev_addr_7bit,
+                                    uint32_t trials,
+                                    uint32_t timeout_ms);
+
+    iic_status_t (*pf_iic_mem_write)(void *h2ic,
+                                     uint16_t dev_addr_7bit,
+                                     uint16_t mem_addr,
+                                     uint16_t mem_addr_size,
+                                     const uint8_t *buf,
+                                     uint16_t len,
+                                     uint32_t timeout_ms);
+
+    iic_status_t (*pf_iic_mem_read)(void *h2ic,
+                                    uint16_t dev_addr_7bit,
+                                    uint16_t mem_addr,
+                                    uint16_t mem_addr_size,
+                                    uint8_t *buf,
+                                    uint16_t len,
+                                    uint32_t timeout_ms);
+} iic_driver_t;
 
 #endif

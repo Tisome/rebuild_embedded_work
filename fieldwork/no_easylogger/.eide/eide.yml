@@ -1,5 +1,5 @@
 version: "4.1"
-name: fieldwork
+name: atk_f103
 type: ARM
 deviceName: STM32F103ZE
 packDir: .pack/Keil/STM32F1xx_DFP.2.3.0
@@ -8,6 +8,7 @@ srcDirs:
   - App
   - Perph
   - Drivers/BSP
+  - BSP
 virtualFolder:
   name: <virtual_root>
   files: []
@@ -21,11 +22,17 @@ virtualFolder:
         - path: User/main.c
         - path: Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
         - path: User/stm32f1xx_it.c
-        - path: User/FreeRTOSConfig.h
+        - path: User/freertos_demo.c
       folders: []
     - name: Drivers
       files: []
       folders:
+        - name: SYSTEM
+          files:
+            - path: Drivers/SYSTEM/delay/delay.c
+            - path: Drivers/SYSTEM/sys/sys.c
+            - path: Drivers/SYSTEM/usart/usart.c
+          folders: []
         - name: STM32F1xx_HAL_Driver
           files:
             - path: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
@@ -76,13 +83,10 @@ virtualFolder:
         - name: easylogger
           files:
             - path: Middlewares/easylogger/src/elog.c
+            - path: Middlewares/easylogger/src/elog_async.c
+            - path: Middlewares/easylogger/src/elog_buf.c
             - path: Middlewares/easylogger/src/elog_utils.c
             - path: Middlewares/easylogger/port/elog_port.c
-          folders: []
-        - name: SEGGER_RTT
-          files:
-            - path: Middlewares/SEGGER_RTT/SEGGER_RTT.c
-            - path: Middlewares/SEGGER_RTT/SEGGER_RTT_printf.c
           folders: []
     - name: Readme
       files:
@@ -98,7 +102,6 @@ targets:
       defineList:
         - USE_HAL_DRIVER
         - STM32F103xE
-        - STM32F10X_HD
       incList:
         - .
         - Drivers/CMSIS/Device/ST/STM32F1xx/Include
@@ -111,16 +114,12 @@ targets:
         - Middlewares/FreeRTOS/portable/RVDS/ARM_CM3
         - .cmsis/include
         - Projects/MDK-ARM/RTE/_FreeRTOS
-        - Middlewares/easylogger/inc
-        - Middlewares/SEGGER_RTT
-        - Task/inc
         - App/inc
+        - Middlewares/easylogger/inc
         - Perph/inc
-        - BSP/inc
+        - BSP/at24cxx/inc
       libList: []
-    excludeList:
-      - <virtual_root>/Drivers/BSP/sram.c
-      - <virtual_root>/Middlewares/MALLOC
+    excludeList: []
     toolchain: AC5
     toolchainConfigMap:
       AC5:
