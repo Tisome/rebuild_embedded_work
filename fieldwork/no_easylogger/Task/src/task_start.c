@@ -5,6 +5,7 @@ static TaskHandle_t task_start_handle = NULL; /* 创建任务句柄 */
 static void task_start(void *params)
 {
     // taskENTER_CRITICAL();
+
     //  输出
     do_create_display_task();
     // 计算
