@@ -1,11 +1,11 @@
+#include "elog.h"
 #include "task_manager.h"
 
 static TaskHandle_t task_start_handle = NULL; /* 创建任务句柄 */
 static void task_start(void *params)
 {
-    taskENTER_CRITICAL();
-
-    // 输出
+    // taskENTER_CRITICAL();
+    //  输出
     do_create_display_task();
     // 计算
     do_create_algorithm_task(); // DONE
@@ -16,20 +16,23 @@ static void task_start(void *params)
     // 测试数据
     do_create_test_task(); // DONE
     // e2prom
-    do_create_bsp_e2prom_task();
+    do_create_bsp_e2prom_task(); // DONE
     // uart?
     do_create_bsp_uart_task();
     // watchdog
     do_create_watchdog_task();
 
-    taskEXIT_CRITICAL(); // 提前退出临界区
-    vTaskDelete(task_start_handle);
-    // 启动系统调度
-    vTaskStartScheduler();
+    // taskEXIT_CRITICAL(); // 提前退出临界区
+
+    vTaskDelete(NULL); // 删除自身任务
 }
 
 void do_create_start_task(void)
 {
     BaseType_t xReturn = pdPASS;
     xReturn = xTaskCreate(task_start, "task_start", 128, NULL, 1, &task_start_handle);
+    if (xReturn != pdPASS)
+    {
+        log_e("create task_start failed\r\n");
+    }
 }

@@ -32,3 +32,5 @@ TaskHandle_t get_bsp_usrt_task_handle(void);
 
 void do_create_watchdog_task(void);
 TaskHandle_t get_watchdog_task_handle(void);
+
+#endif

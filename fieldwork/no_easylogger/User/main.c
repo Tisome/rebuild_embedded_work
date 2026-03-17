@@ -28,7 +28,9 @@
 // #include "./BSP/SRAM/sram.h"
 // #include "./MALLOC/malloc.h"
 // #include "freertos_demo.h"
+#include "FreeRTOS.h"
 #include "freertos_resources.h"
+#include "task.h"
 
 #include "elog.h"
 
@@ -52,4 +54,10 @@ int main(void)
     log_i("hello world\n");
 
     do_create_start_task();
+
+    vTaskStartScheduler(); /* Æô¶¯µ÷¶ÈÆ÷ */
+
+    while (1)
+    {
+    }
 }

@@ -4,6 +4,8 @@
 #include "semphr.h"
 #include "task.h"
 
+#include "data.h"
+
 SemaphoreHandle_t xSem_key_Filter = NULL;  // 按键滤波信号量句柄
 SemaphoreHandle_t xSem_FPGA_INT = NULL;    // FPGA中断信号量句柄
 SemaphoreHandle_t xSem_SPI_Rx_Done = NULL; // SPI数据已接收信号量句柄
@@ -38,6 +40,6 @@ static void vQueueInit(void)
     configASSERT(xQueue_Rx_Index_Buf != NULL);
 
     // 创建算法输出队列
-    xQueue_AlgoOut = xQueueCreate(1, sizeof(algo_out_t));
+    xQueue_AlgoOut = xQueueCreate(1, sizeof(Pipe_algo_out_data_t));
     configASSERT(xQueue_AlgoOut != NULL);
 }

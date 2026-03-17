@@ -81,7 +81,7 @@ void task_spi_rx(void *pvParameter)
 
         // 7) 通过队列发送给算法任务：
         //    队列内部会拷贝 sizeof(packet) 字节，因此 packet 是局部变量也没关系
-        xQueueOverwrite(xQueue_Rx_Index_Buf, &packet, portMAX_DELAY);
+        xQueueOverwrite(xQueue_Rx_Index_Buf, &packet);
     }
 }
 

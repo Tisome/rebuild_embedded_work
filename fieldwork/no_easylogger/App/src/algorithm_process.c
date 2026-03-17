@@ -60,7 +60,11 @@ bool algorithm_process_group(Pipe_Parameters_t *para,
 
     update_flow_outputs(para, state, out, sq, flow_v_final);
 
-    log_i("v = %.1f, q = %.1f, q_all = %.1f, sq = %.1f" out->flow_speed, out->flow_rate_instant, out->flow_rate_total, out->sq_value);
+    log_i("v = %.1f, q = %.1f, q_all = %.1f, sq = %.1f",
+          out->flow_speed,
+          out->flow_rate_instant,
+          out->flow_rate_total,
+          out->sq_value);
 
     flow_alarm(para, out);
 

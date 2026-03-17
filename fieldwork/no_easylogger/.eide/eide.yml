@@ -118,6 +118,7 @@ targets:
         - Middlewares/easylogger/inc
         - Perph/inc
         - BSP/at24cxx/inc
+        - Task/inc
       libList: []
     excludeList: []
     toolchain: AC5
