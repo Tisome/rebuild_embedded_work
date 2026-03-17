@@ -237,6 +237,7 @@ static iic_driver_t g_iic_driver;
 
 void iic_driver_init(iic_driver_t *driver)
 {
+    driver->hi2c = &hi2c1;
     driver->pf_iic_init = iic_init;
     driver->pf_iic_deinit = iic_deinit;
     driver->pf_iic_is_ready = iic_is_ready;

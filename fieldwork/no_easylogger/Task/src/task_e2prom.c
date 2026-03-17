@@ -64,18 +64,23 @@ static void task_e2prom_entry(void *pvParameter)
     static e2prom_handler_os_interface_t os_if;
     static e2prom_input_arg_t input_arg;
 
+    // iic_driver_init
     iic_driver_init(&iic_driver);
-    iic_driver.hi2c = &hi2c1;
     (void)iic_driver.pf_iic_init(iic_driver.hi2c, (void *)E2PROM_IIC_INSTANCE, 100000U);
 
+    // at24cxx_driver_init
     at24cxx_driver_init(&at24cxx_driver);
+
+    // at24cxx_dev_info_init
     (void)at24cxx_driver.pf_init(&at24cxx_dev);
 
+    // os_interface_init
     os_if.os_delay_ms = os_delay_ms_adapter;
     os_if.os_queue_create = os_queue_create_adapter;
     os_if.os_queue_give = os_queue_give_adapter;
     os_if.os_queue_take = os_queue_take_adapter;
 
+    // input_arg_init
     input_arg.iic_driver_instance = &iic_driver;
     input_arg.dev_info_instance = &at24cxx_dev;
     input_arg.at24cxx_driver_instance = &at24cxx_driver;

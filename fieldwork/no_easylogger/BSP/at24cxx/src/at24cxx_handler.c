@@ -74,6 +74,7 @@ e2prom_status_t e2prom_handler_inst(e2prom_handler_t *instance,
         return E2PROM_ERROR_RESOURCE;
     }
 
+    // create event queue if not exist
     if (instance->event_queue_handle == NULL)
     {
         e2prom_status_t qret = instance->os_interface_instance->os_queue_create(
@@ -125,12 +126,14 @@ static e2prom_status_t e2prom_operate_event(const e2prom_event_t *event)
 
 void task_e2prom_handler(void *arg)
 {
+    // the arg is already initialized in task_e2prom_entry, so we can directly use it here
     e2prom_input_arg_t *input_arg = (e2prom_input_arg_t *)arg;
     e2prom_event_t *event = NULL;
 
     static e2prom_handler_t e2prom;
     static at24cxx_handler_t at24cxx_handler;
 
+    // e2prom_handler_inst
     e2prom.at24cxx_handler_instance = &at24cxx_handler;
     e2prom.os_interface_instance = input_arg->os_interface_instance;
     e2prom.event_queue_handle = NULL;

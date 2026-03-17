@@ -1,4 +1,5 @@
 #include "data.h"
+#include "at24cxx_handler.h"
 #include "elog.h"
 
 #include <stdbool.h>
@@ -106,11 +107,11 @@ e2prom_status_t SaveParameters(Pipe_Parameters_t *para)
         return E2PROM_ERROR;
     }
 
-    /* TODO:
-       1. 将 *para 按字节写入 EEPROM
-       2. 建议附带版本号 / CRC / is_saved 标志
-       3. 写成功后返回 E2PROM_OK
-    */
+    e2prom_status_t status = e2prom_write_async(E2PROM_PIPE_PARA_START_ADDR, (uint8_t *)para, sizeof(Pipe_Parameters_t));
+    if (status != E2PROM_OK)
+    {
+        return status;
+    }
 
     return E2PROM_OK;
 }
@@ -122,11 +123,11 @@ e2prom_status_t LoadParameters(Pipe_Parameters_t *para)
         return E2PROM_ERROR;
     }
 
-    /* TODO:
-       1. 从 EEPROM 读出参数到 *para
-       2. 校验数据是否合法（可加 CRC / magic）
-       3. 读成功返回 E2PROM_OK
-    */
+    e2prom_status_t status = e2prom_read_async(E2PROM_PIPE_PARA_START_ADDR, (uint8_t *)para, sizeof(Pipe_Parameters_t));
+    if (status != E2PROM_OK)
+    {
+        return status;
+    }
 
     return E2PROM_OK;
 }

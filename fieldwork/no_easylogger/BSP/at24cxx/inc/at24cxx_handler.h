@@ -7,6 +7,8 @@
 extern "C" {
 #endif
 
+#define E2PROM_PIPE_PARA_START_ADDR 0x0000
+
 typedef enum {
     E2PROM_OK              = 0,
     E2PROM_BUSY            = 1,
