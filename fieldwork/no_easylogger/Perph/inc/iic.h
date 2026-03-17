@@ -121,4 +121,6 @@ typedef struct
                                     uint32_t timeout_ms);
 } iic_driver_t;
 
+void iic_driver_init(iic_driver_t *driver);
+
 #endif

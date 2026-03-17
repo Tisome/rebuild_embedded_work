@@ -10,7 +10,7 @@
 #define AT24CXX_DEFAULT_I2C_ADDR_7BIT         0x50U              // 7bit的at24cxx器件iic地址
 #define AT24CXX_DEFAULT_PAGE_SIZE             32U                // 内部数据页大小(B)
 #define AT24CXX_DEFAULT_MEM_ADDR_SIZE         IIC_MEM_ADDR_16BIT // 内部数据地址长度
-#define AT24CXX_DEFAULT_MEM_SIZE_BYTES        4U                 // 内部数据存储容量
+#define AT24CXX_DEFAULT_MEM_SIZE_BYTES        4096U              // 内部数据存储容量
 #define AT24CXX_DEFAULT_WRITE_CYCLE_TIMEOUTMS 10U                // 写超时时间
 
 #elif E2PROM_AT24C08
@@ -96,5 +96,7 @@ typedef struct
     at24cxx_driver_t *p_at24cxx_driver_instance;
 
 } at24cxx_handler_t;
+
+void at24cxx_driver_init(at24cxx_driver_t *driver);
 
 #endif
