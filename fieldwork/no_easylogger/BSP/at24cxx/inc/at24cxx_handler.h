@@ -3,6 +3,10 @@
 
 #include "at24cxx_driver.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef enum {
     E2PROM_OK              = 0,
     E2PROM_BUSY            = 1,
@@ -29,14 +33,6 @@ typedef struct
 
 typedef struct
 {
-    iic_driver_t *iic_driver_instance;
-    at24cxx_dev_info_t *dev_info_instance;
-    at24cxx_driver_t *at24cxx_driver_instance;
-    e2prom_handler_os_interface_t *os_interface_instance;
-} e2prom_input_arg_t;
-
-typedef struct
-{
     void (*os_delay_ms)(uint32_t const ms);
     e2prom_status_t (*os_queue_create)(uint32_t const item_num,
                                        uint32_t const item_size,
@@ -51,8 +47,31 @@ typedef struct
 
 typedef struct
 {
+    iic_driver_t *iic_driver_instance;
+    at24cxx_dev_info_t *dev_info_instance;
+    at24cxx_driver_t *at24cxx_driver_instance;
+    e2prom_handler_os_interface_t *os_interface_instance;
+} e2prom_input_arg_t;
+
+typedef struct
+{
     at24cxx_handler_t *at24cxx_handler_instance;
     e2prom_handler_os_interface_t *os_interface_instance;
+    void *event_queue_handle;
 } e2prom_handler_t;
+
+at24cxx_status_t at24cxx_handler_inst(at24cxx_handler_t *instance);
+
+e2prom_status_t e2prom_handler_inst(e2prom_handler_t *instance,
+                                    e2prom_input_arg_t *arg);
+
+void task_e2prom_handler(void *arg);
+
+e2prom_status_t e2prom_write_async(uint16_t mem_addr, uint8_t *buf, uint16_t len);
+e2prom_status_t e2prom_read_async(uint16_t mem_addr, uint8_t *buf, uint16_t len);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

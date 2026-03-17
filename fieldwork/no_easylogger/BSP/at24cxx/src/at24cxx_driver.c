@@ -230,12 +230,15 @@ at24cxx_status_t at24cxx_write(const at24cxx_dev_info_t *dev,
     return AT24CXX_OK;
 }
 
-static at24cxx_driver_t g_at24cxx_driver;
-
-void at24cxx_driver_init(at24cxx_oprator_t *p_at24cxx_operator)
+void at24cxx_driver_init(at24cxx_driver_t *driver)
 {
-    p_at24cxx_operator->pf_init = at24cxx_init_default;
-    p_at24cxx_operator->pf_is_ready = at24cxx_is_ready;
-    p_at24cxx_operator->pf_read = at24cxx_read;
-    p_at24cxx_operator->pf_write = at24cxx_write;
+    if (driver == NULL)
+    {
+        return;
+    }
+
+    driver->pf_init = at24cxx_init_default;
+    driver->pf_is_ready = at24cxx_is_ready;
+    driver->pf_read = at24cxx_read;
+    driver->pf_write = at24cxx_write;
 }
