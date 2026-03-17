@@ -50,17 +50,17 @@ typedef struct
 at24cxx_status_t at24cxx_init_default(at24cxx_dev_info_t *dev);
 
 at24cxx_status_t at24cxx_is_ready(const at24cxx_dev_info_t *dev,
-                                  I2C_HandleTypeDef *hi2c,
+                                  const iic_driver_t *iic_driver,
                                   uint32_t trials);
 
 at24cxx_status_t at24cxx_read(const at24cxx_dev_info_t *dev,
-                              I2C_HandleTypeDef *hi2c,
+                              const iic_driver_t *iic_driver,
                               uint16_t mem_addr,
                               uint8_t *buf,
                               uint16_t len);
 
 at24cxx_status_t at24cxx_write(const at24cxx_dev_info_t *dev,
-                               I2C_HandleTypeDef *hi2c,
+                               const iic_driver_t *iic_driver,
                                uint16_t mem_addr,
                                const uint8_t *buf,
                                uint16_t len);
@@ -70,17 +70,17 @@ typedef struct
     at24cxx_status_t (*pf_init)(at24cxx_dev_info_t *dev);
 
     at24cxx_status_t (*pf_is_ready)(const at24cxx_dev_info_t *dev,
-                                    void *hi2c,
+                                    const iic_driver_t *iic_driver,
                                     uint32_t trials);
 
     at24cxx_status_t (*pf_read)(const at24cxx_dev_info_t *dev,
-                                void *hi2c,
+                                const iic_driver_t *iic_driver,
                                 uint16_t mem_addr,
                                 uint8_t *buf,
                                 uint16_t len);
 
     at24cxx_status_t (*pf_write)(const at24cxx_dev_info_t *dev,
-                                 void *hi2c,
+                                 const iic_driver_t *iic_driver,
                                  uint16_t mem_addr,
                                  const uint8_t *buf,
                                  uint16_t len);

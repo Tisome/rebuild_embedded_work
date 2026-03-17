@@ -90,6 +90,24 @@ static at24cxx_status_t at24cxx_check_args(const at24cxx_dev_info_t *dev,
     return HAL_OK;
 }
 
+static at24cxx_status_t at24cxx_check_iic_driver(const iic_driver_t *iic_driver)
+{
+    if ((iic_driver == NULL) || (iic_driver->hi2c == NULL))
+    {
+        log_e("AT24CXX I2C driver resource error");
+        return AT24CXX_ERROR_RESOURCE;
+    }
+
+    if ((iic_driver->pf_iic_is_ready == NULL) || (iic_driver->pf_iic_mem_read == NULL) ||
+        (iic_driver->pf_iic_mem_write == NULL))
+    {
+        log_e("AT24CXX I2C driver function pointer error");
+        return AT24CXX_ERROR_RESOURCE;
+    }
+
+    return AT24CXX_OK;
+}
+
 at24cxx_status_t at24cxx_init_default(at24cxx_dev_info_t *dev)
 {
     if (dev == NULL)
@@ -108,7 +126,7 @@ at24cxx_status_t at24cxx_init_default(at24cxx_dev_info_t *dev)
 }
 
 at24cxx_status_t at24cxx_is_ready(const at24cxx_dev_info_t *dev,
-                                  I2C_HandleTypeDef *hi2c,
+                                  const iic_driver_t *iic_driver,
                                   uint32_t trials)
 {
     if (dev == NULL)
@@ -117,16 +135,22 @@ at24cxx_status_t at24cxx_is_ready(const at24cxx_dev_info_t *dev,
         return AT24CXX_ERROR_RESOURCE;
     }
 
+    at24cxx_status_t at24cxx_ret = at24cxx_check_iic_driver(iic_driver);
+    if (at24cxx_ret != AT24CXX_OK)
+    {
+        return at24cxx_ret;
+    }
+
     if (trials == 0U)
     {
         trials = 1U;
     }
 
-    iic_status_t iic_ret = iic_is_ready(hi2c,
-                                        dev->i2c_addr_7bit,
-                                        trials,
-                                        dev->write_cycle_timeout_ms);
-    at24cxx_status_t at24cxx_ret = at24cxx_status_from_iic_status(iic_ret);
+    iic_status_t iic_ret = iic_driver->pf_iic_is_ready(iic_driver->hi2c,
+                                                       dev->i2c_addr_7bit,
+                                                       trials,
+                                                       dev->write_cycle_timeout_ms);
+    at24cxx_ret = at24cxx_status_from_iic_status(iic_ret);
     if (at24cxx_ret != AT24CXX_OK)
     {
         log_e("AT24CXX IS NOT READY");
@@ -135,7 +159,7 @@ at24cxx_status_t at24cxx_is_ready(const at24cxx_dev_info_t *dev,
 }
 
 at24cxx_status_t at24cxx_read(const at24cxx_dev_info_t *dev,
-                              I2C_HandleTypeDef *hi2c,
+                              const iic_driver_t *iic_driver,
                               uint16_t mem_addr,
                               uint8_t *buf,
                               uint16_t len)
@@ -153,13 +177,20 @@ at24cxx_status_t at24cxx_read(const at24cxx_dev_info_t *dev,
         return at24cxx_ret;
     }
 
-    iic_status_t iic_ret = iic_mem_read(hi2c,
-                                        dev->i2c_addr_7bit,
-                                        mem_addr,
-                                        dev->mem_addr_size,
-                                        buf,
-                                        len,
-                                        dev->write_cycle_timeout_ms);
+    at24cxx_ret = at24cxx_check_iic_driver(iic_driver);
+    if (at24cxx_ret != AT24CXX_OK)
+    {
+        return at24cxx_ret;
+    }
+
+    iic_status_t iic_ret = iic_driver->pf_iic_mem_read(iic_driver->hi2c,
+                                                       dev->i2c_addr_7bit,
+                                                       mem_addr,
+                                                       dev->mem_addr_size,
+                                                       buf,
+                                                       len,
+                                                       dev->write_cycle_timeout_ms);
+
     at24cxx_ret = at24cxx_status_from_iic_status(iic_ret);
     if (at24cxx_ret != AT24CXX_OK)
     {
@@ -169,7 +200,7 @@ at24cxx_status_t at24cxx_read(const at24cxx_dev_info_t *dev,
 }
 
 at24cxx_status_t at24cxx_write(const at24cxx_dev_info_t *dev,
-                               I2C_HandleTypeDef *hi2c,
+                               const iic_driver_t *iic_driver,
                                uint16_t mem_addr,
                                const uint8_t *buf,
                                uint16_t len)
@@ -188,6 +219,12 @@ at24cxx_status_t at24cxx_write(const at24cxx_dev_info_t *dev,
         return at24cxx_ret;
     }
 
+    at24cxx_ret = at24cxx_check_iic_driver(iic_driver);
+    if (at24cxx_ret != AT24CXX_OK)
+    {
+        return at24cxx_ret;
+    }
+
     uint16_t cur_addr = mem_addr; // 当前写的地址
     uint16_t done = 0U;           // 目前已经写了的数据长度
 
@@ -198,13 +235,14 @@ at24cxx_status_t at24cxx_write(const at24cxx_dev_info_t *dev,
         uint16_t remain = (uint16_t)(len - done);                      // 整个数据包的未写的剩下长度
         uint16_t chunk = (page_left < remain) ? page_left : remain;    // 在本页剩余长度和整个数据包的剩下长度中选一个更小的，即为当前要写的数据长度
 
-        iic_ret = iic_mem_write(hi2c,
-                                dev->i2c_addr_7bit,
-                                cur_addr,
-                                dev->mem_addr_size,
-                                &buf[done],
-                                chunk,
-                                dev->write_cycle_timeout_ms);
+        iic_ret = iic_driver->pf_iic_mem_write(iic_driver->hi2c,
+                                               dev->i2c_addr_7bit,
+                                               cur_addr,
+                                               dev->mem_addr_size,
+                                               &buf[done],
+                                               chunk,
+                                               dev->write_cycle_timeout_ms);
+
         at24cxx_ret = at24cxx_status_from_iic_status(iic_ret);
         if (at24cxx_ret != AT24CXX_OK)
         {
@@ -212,10 +250,11 @@ at24cxx_status_t at24cxx_write(const at24cxx_dev_info_t *dev,
             return at24cxx_ret;
         }
 
-        iic_ret = iic_is_ready(hi2c,
-                               dev->i2c_addr_7bit,
-                               5U,
-                               dev->write_cycle_timeout_ms);
+        iic_ret = iic_driver->pf_iic_is_ready(iic_driver->hi2c,
+                                              dev->i2c_addr_7bit,
+                                              5U,
+                                              dev->write_cycle_timeout_ms);
+
         at24cxx_ret = at24cxx_status_from_iic_status(iic_ret);
         if (at24cxx_ret != AT24CXX_OK)
         {

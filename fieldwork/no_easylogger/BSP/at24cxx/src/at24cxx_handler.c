@@ -7,7 +7,7 @@
 #include "elog.h"
 
 #define E2PROM_EVENT_QUEUE_LEN 16U
-#define E2PROM_MAX_DELAY       0xFFFFFFFFUL
+#define E2PROM_MAX_DELAY 0xFFFFFFFFUL
 
 static e2prom_handler_t *g_e2prom_instance = NULL;
 
@@ -79,7 +79,7 @@ e2prom_status_t e2prom_handler_inst(e2prom_handler_t *instance,
         e2prom_status_t qret = instance->os_interface_instance->os_queue_create(
             E2PROM_EVENT_QUEUE_LEN,
             sizeof(e2prom_event_t *),
-            &instance->event_queue_handle);
+            &(instance->event_queue_handle));
         if (qret != E2PROM_OK)
         {
             return qret;
