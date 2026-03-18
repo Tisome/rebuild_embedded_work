@@ -1,5 +1,5 @@
 version: "4.1"
-name: atk_f103
+name: REBUILD_STM32_NO_LVGL
 type: ARM
 deviceName: STM32F103ZE
 packDir: .pack/Keil/STM32F1xx_DFP.2.3.0
@@ -88,6 +88,11 @@ virtualFolder:
             - path: Middlewares/easylogger/src/elog_utils.c
             - path: Middlewares/easylogger/port/elog_port.c
           folders: []
+        - name: circular_buf
+          files:
+            - path: Middlewares/circular_buf/inc/circular_buf.h
+            - path: Middlewares/circular_buf/src/circular_buf.c
+          folders: []
     - name: Readme
       files:
         - path: readme.txt
@@ -119,6 +124,10 @@ targets:
         - Perph/inc
         - BSP/at24cxx/inc
         - Task/inc
+        - BSP/KEY/inc
+        - Middlewares/circular_buffer/inc
+        - Middlewares/SEGGER_RTT
+        - Middlewares/Modbus/inc
       libList: []
     excludeList: []
     toolchain: AC5

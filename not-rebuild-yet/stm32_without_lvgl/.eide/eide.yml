@@ -1,5 +1,5 @@
 version: "4.1"
-name: atk_f103
+name: STM32_NO_LVGL
 type: ARM
 deviceName: null
 packDir: null

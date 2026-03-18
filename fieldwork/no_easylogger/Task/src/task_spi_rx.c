@@ -102,4 +102,8 @@ void do_create_spi_rx_task(void)
                           NULL,
                           9,
                           &task_spi_rx_handle);
+    if (xReturn != pdPASS)
+    {
+        log_e("Failed to create task_spi_rx");
+    }
 }

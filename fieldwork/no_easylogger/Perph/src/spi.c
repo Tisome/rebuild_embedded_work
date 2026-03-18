@@ -1,7 +1,10 @@
+#include "spi.h"
+#include "dma.h"
 #include "sys.h"
 
-#include "dma.h"
-#include "spi.h"
+#include "FreeRTOS.h"
+#include "freertos_resources.h"
+#include "semphr.h"
 
 SPI_HandleTypeDef hspi1 = {0};
 extern DMA_HandleTypeDef hdma_spi1_rx;
@@ -12,9 +15,11 @@ extern DMA_HandleTypeDef hdma_spi1_rx;
  * @param       无
  * @retval      无
  */
-void vSPI1_init(void)
+void spi1_init(void)
 {
-    vDMA1_SPI1_Init(); /* 初始化SPI1的DMA接收 */
+    // spi1中对应的GPIO引脚初始化在HAL_SPI_MspInit函数中完成
+
+    dma1_spi1_Init(); /* 初始化SPI1的DMA接收 */
 
     SPI1_SPI_CLK_ENABLE(); /* 使能SPI1时钟 */
 
@@ -89,7 +94,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi)
  * @note      通过设置SPI1的CR1寄存器中的BR位来改变波特率
  * @param speed 波特率预分频值
  */
-void vSPI1_set_speed(uint8_t speed)
+void spi1_set_speed(uint8_t speed)
 {
     assert_param(IS_SPI_BAUDRATE_PRESCALER(speed)); /* 判断有效性 */
     __HAL_SPI_DISABLE(&hspi1);                      /* 关闭SPI外设 */

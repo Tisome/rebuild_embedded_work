@@ -65,10 +65,10 @@
 
 extern SPI_HandleTypeDef hspi1;
 
-void vSPI1_init(void);
-void vSPI1_set_speed(uint8_t speed);
+void spi1_init(void);
+void spi1_set_speed(uint8_t speed);
 // uint16_t xSPI1_read_word(void);
-// void vSPI1_write_word(uint16_t txdata);
+// void spi1_write_word(uint16_t txdata);
 // uint16_t xSPI1_read_write_halfword(uint16_t txdata);
 
 #endif /* __SPI_H */

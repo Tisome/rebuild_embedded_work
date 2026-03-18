@@ -5,7 +5,7 @@
 
 DMA_HandleTypeDef hdma_spi1_rx;
 
-void vDMA1_SPI1_Init(void)
+void dma1_spi1_init(void)
 {
     __HAL_RCC_DMA1_CLK_ENABLE();
     hdma_spi1_rx.Instance = DMA1_Channel2;
@@ -17,9 +17,6 @@ void vDMA1_SPI1_Init(void)
     hdma_spi1_rx.Init.Mode = DMA_NORMAL;
     hdma_spi1_rx.Init.Priority = DMA_PRIORITY_HIGH;
     HAL_DMA_Init(&hdma_spi1_rx);
-
-    HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 5, 0); /* 设置DMA1通道2中断优先级 */
-    HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);         /* 使能DMA1通道2中断 */
 }
 
 void DMA1_Channel2_IRQHandler(void)
