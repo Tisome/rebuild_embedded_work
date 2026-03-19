@@ -9,10 +9,11 @@ typedef uint8_t circular_buf_data_t;
 
 typedef struct {
     circular_buf_data_t buffer[CIRCULAR_BUF_SIZE];
-    uint32_t head;
-    uint32_t tail;
-    uint32_t count;
+    uint16_t head;
+    uint16_t tail;
 } circular_buf_t;
+
+circular_buf_t *create_empty_circular_buffer(void);
 
 /**
  * @brief Check if the circular buffer pointer is NULL
@@ -50,33 +51,33 @@ uint8_t buffer_is_full(circular_buf_t *p_buffer);
  * @brief Get the number of elements in the circular buffer
  *
  * @param p_buffer Pointer to the circular buffer
- * @return uint32_t : number of elements in the buffer
+ * @return uint16_t : number of elements in the buffer
  */
-uint32_t buffer_get_count(circular_buf_t *p_buffer);
+uint16_t buffer_get_count(circular_buf_t *p_buffer);
 
 /**
- * @brief Push data into the circular buffer
+ * @brief Insert data into the circular buffer
  *
  * @param p_buffer Pointer to the circular buffer
- * @param data Data to be pushed
+ * @param data Data to be inserted
  * @return uint8_t :
  * 0x00: Success
  * 0xFF: p_buffer is NULL/ERROR
  * 0xFE: Buffer is full
  */
-uint8_t buffer_push(circular_buf_t *p_buffer, circular_buf_data_t data);
+uint8_t buffer_insert_data(circular_buf_t *p_buffer, circular_buf_data_t data);
 
 /**
- * @brief Pop data from the circular buffer
+ * @brief Get data from the circular buffer
  *
  * @param p_buffer Pointer to the circular buffer
- * @param data Pointer to store the popped data
+ * @param data Pointer to store the retrieved data
  * @return uint8_t :
  * 0x00: Success
  * 0xFF: p_buffer is NULL/ERROR
  * 0xFE: Buffer is empty
  */
-uint8_t buffer_pop(circular_buf_t *p_buffer, circular_buf_data_t *data);
+uint8_t buffer_get_data(circular_buf_t *p_buffer, circular_buf_data_t *data);
 
 /**
  * @brief Clear the circular buffer
@@ -100,4 +101,15 @@ uint8_t buffer_clear(circular_buf_t *p_buffer);
  */
 uint8_t buffer_peek(circular_buf_t *p_buffer, circular_buf_data_t *data);
 
+/**
+ * @brief Change the head position of the circular buffer
+ *
+ * @param p_buffer Pointer to the circular buffer
+ * @param new_head New head position (0 to CIRCULAR_BUF_SIZE - 1)
+ * @return uint8_t :
+ * 0x00: Success
+ * 0xFF: p_buffer is NULL/ERROR
+ * 0xFE: new_head is out of bounds
+ */
+uint8_t buffer_change_head(circular_buf_t *p_buffer, uint16_t new_head);
 #endif /* __CIRCULAR BUF_H */

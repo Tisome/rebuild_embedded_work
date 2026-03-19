@@ -128,6 +128,7 @@ targets:
         - Middlewares/circular_buffer/inc
         - Middlewares/SEGGER_RTT
         - Middlewares/Modbus/inc
+        - BSP/USART/inc
       libList: []
     excludeList: []
     toolchain: AC5

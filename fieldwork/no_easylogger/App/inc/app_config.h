@@ -1,4 +1,4 @@
-#define USE_MODBUS 0
+#define USE_MODBUS 1
 
 /************************* E2PROM define *************************/
 #ifndef USE_E2PROM

@@ -14,12 +14,12 @@
 
 static TaskHandle_t task_key_handle = NULL;
 
-TaskHandle_t get_key_task_handle(void)
+TaskHandle_t get_bsp_key_task_handle(void)
 {
     return task_key_handle;
 }
 
-void do_create_key_task(void)
+void do_create_bsp_key_task(void)
 {
     BaseType_t result = pdPASS;
     result = xTaskCreate(task_key,

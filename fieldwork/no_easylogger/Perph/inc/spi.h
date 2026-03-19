@@ -64,6 +64,7 @@
 #define FPGA_CS_DISABLE 1
 
 extern SPI_HandleTypeDef hspi1;
+extern DMA_HandleTypeDef hdma_spi1_rx;
 
 void spi1_init(void);
 void spi1_set_speed(uint8_t speed);

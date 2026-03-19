@@ -58,11 +58,6 @@ void parameter_init(void)
             .alarm_lower_rate_range = 10.0,
             .alarm_upper_rate_range = 40.0,
 
-#if USE_MODBUS
-            .modbus_addr = 1,
-            .k_factor = 5,
-#endif
-
             .zero_offset_speed = 0.0,
             .zero_learn_flow_speed = 0.08,
             .zero_learn_alpha = 0.005,
@@ -75,6 +70,10 @@ void parameter_init(void)
             .output_mode = 0,
             .display_sensitivity = 5,
             .zero_stable_threshold = 150,
+
+#if USE_MODBUS
+            .modbus_addr = 0x1,
+#endif
 
             .pipe_type = PIPE_PVC,
             .speed_unit_type = SPEED_UNIT_M_P_S,

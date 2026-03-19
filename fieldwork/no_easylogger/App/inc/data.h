@@ -111,12 +111,6 @@ typedef struct
     double alarm_lower_rate_range; /* 流量报警下限 */
     double alarm_upper_rate_range; /* 流量报警上限 */
 
-#if USE_MODBUS
-    /* -------- Modbus 参数 -------- */
-    double modbus_addr;
-    double k_factor;
-#endif
-
     /* -------- 零漂学习参数 -------- */
     double zero_offset_speed;     /* 当前零漂补偿量 */
     double zero_learn_flow_speed; /* 零漂学习流速阈值 */
@@ -132,6 +126,11 @@ typedef struct
     uint32_t output_mode;           /* 输出模式 */
     uint32_t display_sensitivity;   /* 显示/上传刷新频率 */
     uint32_t zero_stable_threshold; /* 零漂学习所需连续稳定次数 */
+
+#if USE_MODBUS
+    /* -------- Modbus 参数 -------- */
+    uint8_t modbus_addr;
+#endif
 
     /* -------- 枚举配置 -------- */
     PipeType pipe_type;            /* 管道类型 */
