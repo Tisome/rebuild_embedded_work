@@ -18,4 +18,7 @@ void do_create_modbus_parse_task(void)
     }
 }
 
-TaskHandle_t get_modbus_parse_task_handle(void);
+TaskHandle_t get_modbus_parse_task_handle(void)
+{
+    return task_modbus_parse_handle;
+}

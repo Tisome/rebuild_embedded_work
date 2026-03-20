@@ -36,4 +36,7 @@ TaskHandle_t get_watchdog_task_handle(void);
 void do_create_modbus_parse_task(void);
 TaskHandle_t get_modbus_parse_task_handle(void);
 
+void do_create_modbus_execute_task(void);
+TaskHandle_t get_modbus_execute_task_handle(void);
+
 #endif

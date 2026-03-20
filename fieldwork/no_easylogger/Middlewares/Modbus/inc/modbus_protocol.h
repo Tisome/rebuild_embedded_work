@@ -7,8 +7,8 @@ extern Pipe_Parameters_t g_parameters;
 
 #define MODBUS_SLAVE_ADDR 0x01
 
-// Coils（线圈）              → bit   → 可读可写
-// Discrete Inputs（离散输入） → bit   → 只读
+// Coils（线圈 控制）           → bit   → 可读可写
+// Discrete Inputs（离散输入 状态） → bit   → 只读
 // Holding Registers（保持寄存器） → 16bit → 可读可写
 // Input Registers（输入寄存器）   → 16bit → 只读
 
@@ -43,10 +43,13 @@ extern Pipe_Parameters_t g_parameters;
 #define MODBUS_FUNC_WRITE_MULTIPLE_REGISTERS 0x10 // 写多个寄存器
 
 // Modbus 异常码
-#define MODBUS_EXCEPTION_ILLEGAL_FUNCTION     0x01 // 非法功能码
-#define MODBUS_EXCEPTION_ILLEGAL_DATA_ADDRESS 0x02 // 非法数据地址
-#define MODBUS_EXCEPTION_ILLEGAL_DATA_VALUE   0x03 // 非法数据值
-#define MODBUS_EXCEPTION_SERVER_FAILURE       0x04 // 服务器故障
+#define MODBUS_EXCEPTION_ILLEGAL_FUNCTION     0x01
+#define MODBUS_EXCEPTION_ILLEGAL_DATA_ADDRESS 0x02
+#define MODBUS_EXCEPTION_ILLEGAL_DATA_VALUE   0x03
+#define MODBUS_EXCEPTION_SLAVE_DEVICE_FAILURE 0x04
+#define MODBUS_EXCEPTION_ACKNOWLEDGE          0x05
+#define MODBUS_EXCEPTION_SLAVE_DEVICE_BUSY    0x06
+#define MODBUS_EXCEPTION_MEMORY_PARITY_ERROR  0x08
 
 #define MODBUS_TIMEOUT_MS                     (50)
 
@@ -70,5 +73,15 @@ typedef struct
     uint16_t calculated_crc;       // 计算的CRC校验值
     uint32_t last_char_time;       // 上次接收字符的时间戳，用于判断是否超时
 } modbus_parser_t;
+
+typedef enum {
+    MODBUS_CMD_NONE                    = 0, // 无任务
+    MODBUS_CMD_CLEAR_TOTALIZER         = 1, // 清空累计流量
+    MODBUS_CMD_ZERO_LEARN_START        = 2, // 开始0漂学习
+    MODBUS_CMD_SAVE_PARAMETERS         = 3, // 保存参数
+    MODBUS_CMD_LOAD_DEFAULT_PARAMETERS = 4, // 回复默认参数
+    MODBUS_CMD_CLEAR_ALARM             = 5, // 清除报警
+    MODBUS_CMD_SOFT_RESET              = 6  // 软件复位
+} modbus_cmd_t;
 
 #endif

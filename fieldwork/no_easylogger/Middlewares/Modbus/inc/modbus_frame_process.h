@@ -10,8 +10,6 @@
 #define MODBUS_HOLDING_REG_COUNT    64
 #define MODBUS_INPUT_REG_COUNT      64
 
-#define A                           0
-
 /* 初始化和更新 */
 void init_modbus_data(void);
 void update_input_registers(void);
@@ -36,5 +34,7 @@ extern uint8_t g_modbus_coils[(MODBUS_COIL_COUNT + 7) / 8];
 extern uint8_t g_modbus_discrete_inputs[(MODBUS_DISCRETE_INPUT_COUNT + 7) / 8];
 extern uint16_t g_modbus_holding_registers[MODBUS_HOLDING_REG_COUNT];
 extern uint16_t g_modbus_input_registers[MODBUS_INPUT_REG_COUNT];
+
+extern QueueHandle_t g_modbus_cmd_queue;
 
 #endif

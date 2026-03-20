@@ -45,7 +45,7 @@ ALARM_TYPE g_alarm = ALARM_OK;
 
 void parameter_init(void)
 {
-    const Pipe_Parameters_t default_pipe_parameters =
+    Pipe_Parameters_t default_pipe_parameters =
         {
             .inner_diameter = 20.0,
             .wall_thick = 1.0,

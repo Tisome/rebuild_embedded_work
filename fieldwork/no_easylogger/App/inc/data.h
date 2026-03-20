@@ -206,6 +206,10 @@ extern ALARM_TYPE g_alarm;
 
 void parameter_init(void);
 
+e2prom_status_t SaveParameters(Pipe_Parameters_t *para);
+
+e2prom_status_t LoadParameters(Pipe_Parameters_t *para);
+
 #ifdef __cplusplus
 }
 #endif

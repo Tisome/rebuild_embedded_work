@@ -27,6 +27,9 @@ static void task_start(void *params)
     // modbus解析
     do_create_modbus_parse_task();
 
+    // modbus执行
+    do_create_modbus_execute_task();
+
     // watchdog
     do_create_watchdog_task();
 
