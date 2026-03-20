@@ -5,16 +5,42 @@
 
 extern Pipe_Parameters_t g_parameters;
 
-#define MODBUS_SLAVE_ADDR (g_parameters.modbus_addr)
+#define MODBUS_SLAVE_ADDR 0x01
+
+// Coils（线圈）              → bit   → 可读可写
+// Discrete Inputs（离散输入） → bit   → 只读
+// Holding Registers（保持寄存器） → 16bit → 可读可写
+// Input Registers（输入寄存器）   → 16bit → 只读
 
 // Modbus 功能码
-#define MODBUS_READ_COILS               0x01 // 读线圈
-#define MODBUS_READ_DISCRETE_INPUTS     0x02 // 读离散输入
-#define MODBUS_READ_HOLDING_REGISTERS   0x03 // 读保持寄存器
-#define MODBUS_READ_INPUT_REGISTERS     0x04 // 读输入寄存器
-#define MODBUS_WRITE_SINGLE_COIL        0x05 // 写单个线圈
-#define MODBUS_WRITE_SINGLE_REGISTER    0x06 // 写单个寄存器
-#define MODBUS_WRITE_MULTIPLE_REGISTERS 0x10 // 写多个寄存器
+
+// | addr | 01 | start(2B) | quantity(2B) | CRC | -> 请求
+// | addr | 01 | byte_count | data(NB) | CRC | -> 响应
+#define MODBUS_FUNC_READ_COILS 0x01 // 读线圈
+
+// | addr | 02 | start(2B) | quantity(2B) | CRC | -> 请求
+// | addr | 02 | byte_count | data(NB) | CRC | -> 响应
+#define MODBUS_FUNC_READ_DISCRETE_INPUTS 0x02 // 读离散输入
+
+// | addr | 03 | start(2B) | quantity(2B) | CRC | -> 请求
+// | addr | 03 | byte_count | data(2N) | CRC | -> 响应
+#define MODBUS_FUNC_READ_HOLDING_REGISTERS 0x03 // 读保持寄存器
+
+// | addr | 04 | start(2B) | quantity(2B) | CRC | -> 请求
+// | addr | 04 | byte_count | data(2N) | CRC | -> 响应
+#define MODBUS_FUNC_READ_INPUT_REGISTERS 0x04 // 读输入寄存器
+
+// | addr | 05 | addr(2B) | value(2B) | CRC | -> 请求
+// | addr | 05 | addr(2B) | value(2B) | CRC | -> 响应（回显）
+#define MODBUS_FUNC_WRITE_SINGLE_COIL 0x05 // 写单个线圈
+
+// | addr | 06 | addr(2B) | value(2B) | CRC | -> 请求
+// | addr | 06 | addr(2B) | value(2B) | CRC | -> 响应（回显）
+#define MODBUS_FUNC_WRITE_SINGLE_REGISTER 0x06 // 写单个寄存器
+
+// | addr | 10 | start(2B) | quantity(2B) | byte_count | data(2N) | CRC | -> 请求
+// | addr | 10 | start(2B) | quantity(2B) | CRC | -> 响应
+#define MODBUS_FUNC_WRITE_MULTIPLE_REGISTERS 0x10 // 写多个寄存器
 
 // Modbus 异常码
 #define MODBUS_EXCEPTION_ILLEGAL_FUNCTION     0x01 // 非法功能码
@@ -25,12 +51,11 @@ extern Pipe_Parameters_t g_parameters;
 #define MODBUS_TIMEOUT_MS                     (50)
 
 typedef enum {
-    MODBUS_STATE_IDLE     = 0, // 空闲状态
-    MODBUS_STATE_ADDRESS  = 1, // 已接收地址
-    MODBUS_STATE_FUNCTION = 2, // 已接收功能码
-    MODBUS_STATE_DATA     = 3, // 已接收数据
-    MODBUS_STATE_CRC_LOW  = 4, // 已接收CRC低字节
-    MODBUS_STATE_CRC_HIGH = 5  // 已接收CRC高字节
+    MODBUS_STATE_IDLE                         = 0, // 空闲状态
+    MODBUS_STATE_ADDRESS_DONE__FUNCTION_START = 1, // 已接收地址
+    MODBUS_STATE_FUNCTION_DONE__DATA_START    = 2, // 已接收功能码
+    MODBUS_STATE_DATA_DONE__CRC_LOW           = 3, // 已接收数据
+    MODBUS_STATE_CRC_LOW_DONE__CRC_HIGH       = 4  // 已接收CRC低字节
 } modbus_state_t;
 
 typedef struct

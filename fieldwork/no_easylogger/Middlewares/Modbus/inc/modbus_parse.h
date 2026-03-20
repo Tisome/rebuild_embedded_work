@@ -1,7 +1,7 @@
 #ifndef __MODBUS_PARSE_H
 #define __MODBUS_PARSE_H
 
-#include "modbus_protocol.h"
+extern QueueHandle_t g_modbus_parse_queue;
 
 void task_modbus_parse(void *parameter);
 
