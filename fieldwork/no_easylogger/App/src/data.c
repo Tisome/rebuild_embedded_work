@@ -37,9 +37,137 @@ Pipe_algo_out_data_t g_algo_out =
         .flow_speed = 0.0,
         .flow_rate_instant = 0.0,
         .flow_rate_total = 0.0,
-        .sq_value = 0.0};
+        .sq_value = 0.0,
+        .flow_speed_unit = SPEED_UNIT_M_P_S,
+        .flow_rate_unit = RATE_UNIT_M3_P_S,
+        .flow_total_unit = VOLUME_UNIT_M3};
 
 ALARM_TYPE g_alarm = ALARM_OK;
+
+double convert_speed_from_mps(double speed_mps, SpeedUnitType unit)
+{
+    switch (unit)
+    {
+    case SPEED_UNIT_CM_P_S:
+        return speed_mps * 100.0;
+
+    case SPEED_UNIT_MM_P_S:
+        return speed_mps * 1000.0;
+
+    case SPEED_UNIT_M_P_S:
+    default:
+        return speed_mps;
+    }
+}
+
+double convert_rate_from_m3ps(double rate_m3ps, RateUnitType unit)
+{
+    switch (unit)
+    {
+    case RATE_UNIT_M3_P_H:
+        return rate_m3ps * 3600.0;
+
+    case RATE_UNIT_M3_P_MIN:
+        return rate_m3ps * 60.0;
+
+    case RATE_UNIT_L_P_H:
+        return rate_m3ps * 1000.0 * 3600.0;
+
+    case RATE_UNIT_L_P_MIN:
+        return rate_m3ps * 1000.0 * 60.0;
+
+    case RATE_UNIT_L_P_S:
+        return rate_m3ps * 1000.0;
+
+    case RATE_UNIT_M3_P_S:
+    default:
+        return rate_m3ps;
+    }
+}
+
+double convert_volume_from_m3(double volume_m3, VolumeUnitType unit)
+{
+    switch (unit)
+    {
+    case VOLUME_UNIT_L:
+        return volume_m3 * 1000.0;
+
+    case VOLUME_UNIT_M3:
+    default:
+        return volume_m3;
+    }
+}
+
+VolumeUnitType volume_unit_from_rate_unit(RateUnitType rate_unit)
+{
+    switch (rate_unit)
+    {
+    case RATE_UNIT_L_P_H:
+    case RATE_UNIT_L_P_MIN:
+    case RATE_UNIT_L_P_S:
+        return VOLUME_UNIT_L;
+
+    case RATE_UNIT_M3_P_H:
+    case RATE_UNIT_M3_P_MIN:
+    case RATE_UNIT_M3_P_S:
+    default:
+        return VOLUME_UNIT_M3;
+    }
+}
+
+const char *speed_unit_to_str(SpeedUnitType unit)
+{
+    switch (unit)
+    {
+    case SPEED_UNIT_CM_P_S:
+        return "cm/s";
+
+    case SPEED_UNIT_MM_P_S:
+        return "mm/s";
+
+    case SPEED_UNIT_M_P_S:
+    default:
+        return "m/s";
+    }
+}
+
+const char *rate_unit_to_str(RateUnitType unit)
+{
+    switch (unit)
+    {
+    case RATE_UNIT_M3_P_H:
+        return "m3/h";
+
+    case RATE_UNIT_M3_P_MIN:
+        return "m3/min";
+
+    case RATE_UNIT_L_P_H:
+        return "L/h";
+
+    case RATE_UNIT_L_P_MIN:
+        return "L/min";
+
+    case RATE_UNIT_L_P_S:
+        return "L/s";
+
+    case RATE_UNIT_M3_P_S:
+    default:
+        return "m3/s";
+    }
+}
+
+const char *volume_unit_to_str(VolumeUnitType unit)
+{
+    switch (unit)
+    {
+    case VOLUME_UNIT_L:
+        return "L";
+
+    case VOLUME_UNIT_M3:
+    default:
+        return "m3";
+    }
+}
 
 /* ========================= 参数初始化 ========================= */
 

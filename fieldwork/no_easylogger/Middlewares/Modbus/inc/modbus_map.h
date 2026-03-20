@@ -6,6 +6,30 @@
 #define MB_COIL_CLEAR_ALARM             5
 #define MB_COIL_SOFT_RESET              6
 
+#define HR_INNER_DIAMETER               0
+#define HR_WALL_THICK                   1
+#define HR_COS_VALUE_H                  2
+#define HR_SIN_VALUE_H                  4
+#define HR_LOWER_SPEED_RANGE_H          6
+#define HR_UPPER_SPEED_RANGE_H          8
+#define HR_ALARM_LOWER_RATE_RANGE_H     10
+#define HR_ALARM_UPPER_RATE_RANGE_H     12
+#define HR_ZERO_OFFSET_SPEED_H          14
+#define HR_ZERO_LEARN_FLOW_SPEED_H      16
+#define HR_ZERO_LEARN_ALPHA_H           18
+#define HR_ZERO_LEARN_OFFSET_MAX_H      20
+#define HR_ZERO_LEARN_SQ_MIN_H          22
+#define HR_TE_NS_H                      24
+#define HR_IS_SAVED                     26
+#define HR_OUTPUT_MODE                  27
+#define HR_DISPLAY_SENSITIVITY          28
+#define HR_ZERO_STABLE_THRESHOLD        29
+#define HR_MODBUS_ADDR                  30
+#define HR_PIPE_TYPE                    31
+#define HR_SPEED_UNIT_TYPE              32
+#define HR_RATE_UNIT_TYPE               33
+#define HR_LAST_WRITABLE                HR_RATE_UNIT_TYPE
+
 #define IR_FLOW_SPEED_H                 0
 #define IR_FLOW_RATE_INSTANT_H          2
 #define IR_FLOW_RATE_TOTAL_H            4

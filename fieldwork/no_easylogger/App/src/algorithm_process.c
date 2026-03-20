@@ -23,7 +23,10 @@ bool algorithm_process_group(Pipe_Parameters_t *para,
                   (dt_ns > DT_UP_LIMIT_NS) ||
                   (dt_ns < DT_LOW_LIMIT_NS);
 
-    log_v("this data is bad.");
+    if (is_bad)
+    {
+        log_v("this data is bad.");
+    }
 
     sq_window_update(state, is_bad);
 
@@ -38,7 +41,7 @@ bool algorithm_process_group(Pipe_Parameters_t *para,
     log_v("raw flow speed is %.3f m/s", flow_v_mps_raw);
 
     double flow_v_avg = 0.0;
-    if (!flow_window_add(state, *flow_v_mps_raw, *flow_v_avg))
+    if (!flow_window_add(state, &flow_v_mps_raw, &flow_v_avg))
     {
         log_v("don't out avg flow speed");
         return false;
@@ -66,7 +69,7 @@ bool algorithm_process_group(Pipe_Parameters_t *para,
           out->flow_rate_total,
           out->sq_value);
 
-    flow_alarm(para, out);
+    flow_alarm(para, flow_v_final);
 
     return true;
 }

@@ -31,7 +31,7 @@ void task_algorithm(void *pvParameter)
 
     while (1)
     {
-        if (xQueueReceive(xQueue_Rx_Index_Buf, &raw, pdMS_TO_TICKS(10)) == pdTRUE)
+        if (xQueueReceive(xQueue_Rx_Index_Buf, &raw, pdMS_TO_TICKS(20)) == pdTRUE)
         {
             log_v("receive rufx raw packet");
             g_alarm = ALARM_OK;

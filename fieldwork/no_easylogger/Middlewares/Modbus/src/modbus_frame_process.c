@@ -6,6 +6,7 @@
 #include "queue.h"
 
 #include "data.h"
+#include "at24cxx_handler.h"
 
 #include "usart.h"
 
@@ -13,6 +14,7 @@
 
 #include "elog.h"
 
+#include <math.h>
 #include <string.h>
 
 /* -------------------- Modbus 数据区 -------------------- */
@@ -56,6 +58,13 @@ static void set_s64_to_regs(uint16_t *regs, uint16_t start_idx, int64_t value)
     regs[start_idx + 3] = (uint16_t)(u & 0xFFFF);
 }
 
+static int32_t get_s32_from_regs(const uint16_t *regs, uint16_t start_idx)
+{
+    uint32_t u = ((uint32_t)regs[start_idx] << 16) |
+                 (uint32_t)regs[start_idx + 1];
+    return (int32_t)u;
+}
+
 static uint8_t get_bit_from_buf(const uint8_t *buf, uint16_t bit_index)
 {
     return (buf[bit_index / 8] >> (bit_index % 8)) & 0x01;
@@ -83,6 +92,179 @@ static void modbus_put_u16_be(uint8_t *buf, uint16_t value)
 {
     buf[0] = (uint8_t)((value >> 8) & 0xFF);
     buf[1] = (uint8_t)(value & 0xFF);
+}
+
+static bool is_valid_speed_unit(uint16_t value)
+{
+    return value <= (uint16_t)SPEED_UNIT_MM_P_S;
+}
+
+static bool is_valid_rate_unit(uint16_t value)
+{
+    return value <= (uint16_t)RATE_UNIT_L_P_S;
+}
+
+static bool is_valid_pipe_type(uint16_t value)
+{
+    return value <= (uint16_t)PIPE_ALLOY;
+}
+
+static bool is_holding_register_writable(uint16_t reg_addr)
+{
+    return reg_addr <= HR_LAST_WRITABLE;
+}
+
+static bool validate_parameters(const Pipe_Parameters_t *para)
+{
+    if (para == NULL)
+    {
+        return false;
+    }
+
+    if ((para->inner_diameter <= 0.0) || (para->inner_diameter > 10000.0))
+    {
+        return false;
+    }
+
+    if ((para->wall_thick <= 0.0) || (para->wall_thick >= para->inner_diameter))
+    {
+        return false;
+    }
+
+    if ((para->cos_value <= 0.0) || (para->cos_value > 1.0))
+    {
+        return false;
+    }
+
+    if ((para->sin_value <= 0.0) || (para->sin_value > 1.0))
+    {
+        return false;
+    }
+
+    if ((para->lower_speed_range < 0.0) ||
+        (para->upper_speed_range <= 0.0) ||
+        (para->lower_speed_range >= para->upper_speed_range))
+    {
+        return false;
+    }
+
+    if ((para->alarm_lower_rate_range < 0.0) ||
+        (para->alarm_upper_rate_range < para->alarm_lower_rate_range))
+    {
+        return false;
+    }
+
+    if ((fabs(para->zero_offset_speed) > para->zero_learn_offset_max) ||
+        (para->zero_learn_flow_speed < 0.0) ||
+        (para->zero_learn_alpha <= 0.0) ||
+        (para->zero_learn_alpha > 1.0) ||
+        (para->zero_learn_offset_max < 0.0))
+    {
+        return false;
+    }
+
+    if ((para->zero_learn_sq_min < 0.0) || (para->zero_learn_sq_min > 100.0))
+    {
+        return false;
+    }
+
+    if (para->te_ns < 0.0)
+    {
+        return false;
+    }
+
+    if (para->zero_stable_threshold == 0U)
+    {
+        return false;
+    }
+
+#if USE_MODBUS
+    if ((para->modbus_addr == 0U) || (para->modbus_addr > 247U))
+    {
+        return false;
+    }
+#endif
+
+    if (!is_valid_pipe_type((uint16_t)para->pipe_type) ||
+        !is_valid_speed_unit((uint16_t)para->speed_unit_type) ||
+        !is_valid_rate_unit((uint16_t)para->rate_unit_type))
+    {
+        return false;
+    }
+
+    return true;
+}
+
+static void fill_parameters_from_holding_registers(Pipe_Parameters_t *para)
+{
+    if (para == NULL)
+    {
+        return;
+    }
+
+    para->inner_diameter = (double)g_modbus_holding_registers[HR_INNER_DIAMETER] / 100.0;
+    para->wall_thick = (double)g_modbus_holding_registers[HR_WALL_THICK] / 100.0;
+    para->cos_value = (double)get_s32_from_regs(g_modbus_holding_registers, HR_COS_VALUE_H) / 1000000.0;
+    para->sin_value = (double)get_s32_from_regs(g_modbus_holding_registers, HR_SIN_VALUE_H) / 1000000.0;
+    para->lower_speed_range = (double)get_s32_from_regs(g_modbus_holding_registers, HR_LOWER_SPEED_RANGE_H) / 1000.0;
+    para->upper_speed_range = (double)get_s32_from_regs(g_modbus_holding_registers, HR_UPPER_SPEED_RANGE_H) / 1000.0;
+    para->alarm_lower_rate_range = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ALARM_LOWER_RATE_RANGE_H) / 1000.0;
+    para->alarm_upper_rate_range = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ALARM_UPPER_RATE_RANGE_H) / 1000.0;
+    para->zero_offset_speed = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ZERO_OFFSET_SPEED_H) / 1000.0;
+    para->zero_learn_flow_speed = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ZERO_LEARN_FLOW_SPEED_H) / 1000.0;
+    para->zero_learn_alpha = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ZERO_LEARN_ALPHA_H) / 1000000.0;
+    para->zero_learn_offset_max = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ZERO_LEARN_OFFSET_MAX_H) / 1000.0;
+    para->zero_learn_sq_min = (double)get_s32_from_regs(g_modbus_holding_registers, HR_ZERO_LEARN_SQ_MIN_H) / 1000.0;
+    para->te_ns = (double)get_s32_from_regs(g_modbus_holding_registers, HR_TE_NS_H);
+    para->output_mode = (uint32_t)g_modbus_holding_registers[HR_OUTPUT_MODE];
+    para->display_sensitivity = (uint32_t)g_modbus_holding_registers[HR_DISPLAY_SENSITIVITY];
+    para->zero_stable_threshold = (uint32_t)g_modbus_holding_registers[HR_ZERO_STABLE_THRESHOLD];
+#if USE_MODBUS
+    para->modbus_addr = (uint8_t)g_modbus_holding_registers[HR_MODBUS_ADDR];
+#endif
+    para->pipe_type = (PipeType)g_modbus_holding_registers[HR_PIPE_TYPE];
+    para->speed_unit_type = (SpeedUnitType)g_modbus_holding_registers[HR_SPEED_UNIT_TYPE];
+    para->rate_unit_type = (RateUnitType)g_modbus_holding_registers[HR_RATE_UNIT_TYPE];
+}
+
+static bool apply_holding_registers_to_parameters(uint8_t *exception_code)
+{
+    Pipe_Parameters_t old_parameters = g_parameters;
+    Pipe_Parameters_t new_parameters = g_parameters;
+    e2prom_status_t save_status = E2PROM_OK;
+
+    fill_parameters_from_holding_registers(&new_parameters);
+    new_parameters.is_saved = 1U;
+
+    if (!validate_parameters(&new_parameters))
+    {
+        if (exception_code != NULL)
+        {
+            *exception_code = MODBUS_EXCEPTION_ILLEGAL_DATA_VALUE;
+        }
+        update_holding_registers_from_parameters();
+        return false;
+    }
+
+    g_parameters = new_parameters;
+
+    save_status = SaveParameters(&g_parameters);
+    if (save_status != E2PROM_OK)
+    {
+        if (exception_code != NULL)
+        {
+            *exception_code = (save_status == E2PROM_BUSY)
+                                  ? MODBUS_EXCEPTION_SLAVE_DEVICE_BUSY
+                                  : MODBUS_EXCEPTION_SLAVE_DEVICE_FAILURE;
+        }
+        g_parameters = old_parameters;
+        update_holding_registers_from_parameters();
+        return false;
+    }
+
+    update_holding_registers_from_parameters();
+    update_input_registers();
+    return true;
 }
 
 /* -------------------- 读线圈 0x01 -------------------- */
@@ -338,14 +520,22 @@ static void handle_write_single_registers(modbus_parser_t *parser)
 {
     uint16_t reg_addr = modbus_get_u16_be(&parser->data[0]);
     uint16_t reg_value = modbus_get_u16_be(&parser->data[2]);
+    uint8_t exception_code = MODBUS_EXCEPTION_ILLEGAL_DATA_VALUE;
 
-    if (reg_addr >= MODBUS_HOLDING_REG_COUNT)
+    if ((reg_addr >= MODBUS_HOLDING_REG_COUNT) ||
+        !is_holding_register_writable(reg_addr))
     {
         modbus_send_expection_respense(parser, MODBUS_EXCEPTION_ILLEGAL_DATA_ADDRESS);
         return;
     }
 
     g_modbus_holding_registers[reg_addr] = reg_value;
+
+    if (!apply_holding_registers_to_parameters(&exception_code))
+    {
+        modbus_send_expection_respense(parser, exception_code);
+        return;
+    }
 
     /* 协议要求：正常响应回显原请求 */
     modbus_send_response(parser->address,
@@ -361,6 +551,7 @@ static void handle_write_multiple_registers(modbus_parser_t *parser)
     uint16_t start_addr = modbus_get_u16_be(&parser->data[0]);
     uint16_t quantity = modbus_get_u16_be(&parser->data[2]);
     uint8_t byte_count = parser->data[4];
+    uint8_t exception_code = MODBUS_EXCEPTION_ILLEGAL_DATA_VALUE;
 
     if ((quantity < 1) || (quantity > 123))
     {
@@ -382,8 +573,23 @@ static void handle_write_multiple_registers(modbus_parser_t *parser)
 
     for (uint16_t i = 0; i < quantity; i++)
     {
+        if (!is_holding_register_writable((uint16_t)(start_addr + i)))
+        {
+            modbus_send_expection_respense(parser, MODBUS_EXCEPTION_ILLEGAL_DATA_ADDRESS);
+            return;
+        }
+    }
+
+    for (uint16_t i = 0; i < quantity; i++)
+    {
         g_modbus_holding_registers[start_addr + i] =
             modbus_get_u16_be(&parser->data[5 + i * 2]);
+    }
+
+    if (!apply_holding_registers_to_parameters(&exception_code))
+    {
+        modbus_send_expection_respense(parser, exception_code);
+        return;
     }
 
     /* 响应：起始地址 + 数量 */
@@ -561,53 +767,53 @@ void update_holding_registers_from_parameters(void)
 {
     memset(g_modbus_holding_registers, 0, sizeof(g_modbus_holding_registers));
 
-    g_modbus_holding_registers[0] = (uint16_t)(g_parameters.inner_diameter * 100.0);
-    g_modbus_holding_registers[1] = (uint16_t)(g_parameters.wall_thick * 100.0);
+    g_modbus_holding_registers[HR_INNER_DIAMETER] = (uint16_t)(g_parameters.inner_diameter * 100.0);
+    g_modbus_holding_registers[HR_WALL_THICK] = (uint16_t)(g_parameters.wall_thick * 100.0);
 
-    set_s32_to_regs(g_modbus_holding_registers, 2,
+    set_s32_to_regs(g_modbus_holding_registers, HR_COS_VALUE_H,
                     (int32_t)(g_parameters.cos_value * 1000000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 4,
+    set_s32_to_regs(g_modbus_holding_registers, HR_SIN_VALUE_H,
                     (int32_t)(g_parameters.sin_value * 1000000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 6,
+    set_s32_to_regs(g_modbus_holding_registers, HR_LOWER_SPEED_RANGE_H,
                     (int32_t)(g_parameters.lower_speed_range * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 8,
+    set_s32_to_regs(g_modbus_holding_registers, HR_UPPER_SPEED_RANGE_H,
                     (int32_t)(g_parameters.upper_speed_range * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 10,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ALARM_LOWER_RATE_RANGE_H,
                     (int32_t)(g_parameters.alarm_lower_rate_range * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 12,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ALARM_UPPER_RATE_RANGE_H,
                     (int32_t)(g_parameters.alarm_upper_rate_range * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 14,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ZERO_OFFSET_SPEED_H,
                     (int32_t)(g_parameters.zero_offset_speed * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 16,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ZERO_LEARN_FLOW_SPEED_H,
                     (int32_t)(g_parameters.zero_learn_flow_speed * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 18,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ZERO_LEARN_ALPHA_H,
                     (int32_t)(g_parameters.zero_learn_alpha * 1000000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 20,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ZERO_LEARN_OFFSET_MAX_H,
                     (int32_t)(g_parameters.zero_learn_offset_max * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 22,
+    set_s32_to_regs(g_modbus_holding_registers, HR_ZERO_LEARN_SQ_MIN_H,
                     (int32_t)(g_parameters.zero_learn_sq_min * 1000.0));
 
-    set_s32_to_regs(g_modbus_holding_registers, 24,
+    set_s32_to_regs(g_modbus_holding_registers, HR_TE_NS_H,
                     (int32_t)(g_parameters.te_ns));
 
-    g_modbus_holding_registers[26] = (uint16_t)g_parameters.is_saved;
-    g_modbus_holding_registers[27] = (uint16_t)g_parameters.output_mode;
-    g_modbus_holding_registers[28] = (uint16_t)g_parameters.display_sensitivity;
-    g_modbus_holding_registers[29] = (uint16_t)g_parameters.zero_stable_threshold;
-    g_modbus_holding_registers[30] = (uint16_t)g_parameters.modbus_addr;
-    g_modbus_holding_registers[31] = (uint16_t)g_parameters.pipe_type;
-    g_modbus_holding_registers[32] = (uint16_t)g_parameters.speed_unit_type;
-    g_modbus_holding_registers[33] = (uint16_t)g_parameters.rate_unit_type;
+    g_modbus_holding_registers[HR_IS_SAVED] = (uint16_t)g_parameters.is_saved;
+    g_modbus_holding_registers[HR_OUTPUT_MODE] = (uint16_t)g_parameters.output_mode;
+    g_modbus_holding_registers[HR_DISPLAY_SENSITIVITY] = (uint16_t)g_parameters.display_sensitivity;
+    g_modbus_holding_registers[HR_ZERO_STABLE_THRESHOLD] = (uint16_t)g_parameters.zero_stable_threshold;
+    g_modbus_holding_registers[HR_MODBUS_ADDR] = (uint16_t)g_parameters.modbus_addr;
+    g_modbus_holding_registers[HR_PIPE_TYPE] = (uint16_t)g_parameters.pipe_type;
+    g_modbus_holding_registers[HR_SPEED_UNIT_TYPE] = (uint16_t)g_parameters.speed_unit_type;
+    g_modbus_holding_registers[HR_RATE_UNIT_TYPE] = (uint16_t)g_parameters.rate_unit_type;
 }
 
 /* -------------------- 功能分发 -------------------- */

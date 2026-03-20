@@ -71,7 +71,9 @@ typedef enum {
 } PipeType;
 
 typedef enum {
-    SPEED_UNIT_M_P_S = 0
+    SPEED_UNIT_M_P_S = 0,
+    SPEED_UNIT_CM_P_S,
+    SPEED_UNIT_MM_P_S
 } SpeedUnitType;
 
 typedef enum {
@@ -82,6 +84,11 @@ typedef enum {
     RATE_UNIT_L_P_MIN,
     RATE_UNIT_L_P_S
 } RateUnitType;
+
+typedef enum {
+    VOLUME_UNIT_M3 = 0,
+    VOLUME_UNIT_L
+} VolumeUnitType;
 
 typedef enum {
     ALARM_OK = 0,
@@ -169,6 +176,9 @@ typedef struct
     double flow_rate_instant; /* 瞬时流量 */
     double flow_rate_total;   /* 累计流量 */
     double sq_value;          /* SQ 值 */
+    SpeedUnitType flow_speed_unit;  /* 流速显示单位 */
+    RateUnitType flow_rate_unit;    /* 瞬时流量显示单位 */
+    VolumeUnitType flow_total_unit; /* 累计流量显示单位 */
 } Pipe_algo_out_data_t;
 
 /* ========================= 数据包结构体 ========================= */
@@ -198,13 +208,20 @@ extern Pipe_Parameters_t g_parameters;
 extern Pipe_algo_state_t g_algo_state;
 extern Pipe_algo_out_data_t g_algo_out;
 
-extern rufx_raw_packet_t packet;
-
 extern ALARM_TYPE g_alarm;
 
 /* ========================= 接口声明 ========================= */
 
 void parameter_init(void);
+
+double convert_speed_from_mps(double speed_mps, SpeedUnitType unit);
+double convert_rate_from_m3ps(double rate_m3ps, RateUnitType unit);
+double convert_volume_from_m3(double volume_m3, VolumeUnitType unit);
+VolumeUnitType volume_unit_from_rate_unit(RateUnitType rate_unit);
+
+const char *speed_unit_to_str(SpeedUnitType unit);
+const char *rate_unit_to_str(RateUnitType unit);
+const char *volume_unit_to_str(VolumeUnitType unit);
 
 e2prom_status_t SaveParameters(Pipe_Parameters_t *para);
 

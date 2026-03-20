@@ -1,12 +1,13 @@
 #include "algorithm_flow.h"
 #include <math.h>
+#include <string.h>
 
 #include "elog.h"
 #define LOG_TAG "algo_flow_out"
 #define LOG_LVL ELOG_LVL_VERBOSE
 
 // 更新 3 秒窗口坏数据统计（环形缓冲）
-static void sq_window_update(Pipe_algo_state_t *s, bool is_bad)
+void sq_window_update(Pipe_algo_state_t *s, bool is_bad)
 {
     if (s->sq_count < SQ_WINDOW_GROUPS)
     {
@@ -25,7 +26,7 @@ static void sq_window_update(Pipe_algo_state_t *s, bool is_bad)
 }
 
 // 获取 SQ（好数据百分比）
-static double sq_get_percent(const Pipe_algo_state_t *s)
+double sq_get_percent(const Pipe_algo_state_t *s)
 {
     uint16_t denom = (s->sq_count == 0U) ? 1U : s->sq_count;
     double bad = s->sq_bad_count;
@@ -102,10 +103,10 @@ double calc_t_wall_ns(Pipe_Parameters_t *para)
  * - L1 = pipe_dn : mm
  * - 输出 v : m/s
  */
-static double vel_calc_from_dt(Pipe_Parameters_t *para,
-                               double t1_ns,
-                               double t2_ns,
-                               double dt_ns)
+double vel_calc_from_dt(Pipe_Parameters_t *para,
+                        double t1_ns,
+                        double t2_ns,
+                        double dt_ns)
 {
     // ---- 参数准备 ----
     const double cos_sin = para->cos_value * para->sin_value;
@@ -210,7 +211,7 @@ bool flow_window_add(Pipe_algo_state_t *state,
 }
 
 // 一维卡尔曼滤波（输入 measurement，输出平滑后的估计值）
-static double run_kalman_filter(kalman_t *k, double measurement)
+double run_kalman_filter(kalman_t *k, double measurement)
 {
     k->p += k->q;
     k->k = k->p / (k->p + k->r);
@@ -220,10 +221,10 @@ static double run_kalman_filter(kalman_t *k, double measurement)
 }
 
 // 自动 0漂补偿：仅在 “SQ高 + 输出接近0 + 连续稳定” 时缓慢学习 offset
-static double flow_drift_comp(Pipe_Parameters_t *para,
-                              Pipe_algo_state_t *state,
-                              double v,
-                              double sq)
+double flow_drift_comp(Pipe_Parameters_t *para,
+                       Pipe_algo_state_t *state,
+                       double v,
+                       double sq)
 {
     // ====== 参数（建议后续调参）======
     const double SQ_LEARN_MIN = para->zero_learn_sq_min;    // SQ阈值：信号质量足够好才学
@@ -264,8 +265,8 @@ static double flow_drift_comp(Pipe_Parameters_t *para,
 }
 
 // 最终限幅/死区处理
-static double flow_limit(Pipe_Parameters_t *para,
-                         double v)
+double flow_limit(Pipe_Parameters_t *para,
+                  double v)
 {
     if (fabs(v) < para->lower_speed_range)
     {
@@ -280,7 +281,7 @@ static double flow_limit(Pipe_Parameters_t *para,
     return v;
 }
 
-static double pipe_area_m2(const Pipe_Parameters_t *para)
+double pipe_area_m2(const Pipe_Parameters_t *para)
 {
     // 如果 pipe_dn 代表内径 mm
     const double D_m = para->inner_diameter * 1e-3;
@@ -288,34 +289,40 @@ static double pipe_area_m2(const Pipe_Parameters_t *para)
     return (double)(M_PI * r * r);
 }
 
-static void update_flow_outputs(Pipe_Parameters_t *para,
-                                Pipe_algo_state_t *state,
-                                Pipe_algo_out_data_t *out,
-                                double sq,
-                                double v_mps)
+void update_flow_outputs(Pipe_Parameters_t *para,
+                         Pipe_algo_state_t *state,
+                         Pipe_algo_out_data_t *out,
+                         double sq,
+                         double v_mps)
 {
     const double A = pipe_area_m2(para);
 
     /* 内部基准量：m^3/s */
     const double q_m3ps = v_mps * A;
+    const VolumeUnitType total_unit = volume_unit_from_rate_unit(para->rate_unit_type);
 
     /* 累计流量保持 m^3 */
     state->q_total_m3 += q_m3ps * (double)DT_S;
 
-    out->flow_speed = v_mps;                  /* m/s */
-    out->flow_rate_instant = q_m3ps;          /* m^3/s */
-    out->flow_rate_total = state->q_total_m3; /* m^3 */
-    out->sq_value = sq;                       /* % */
+    out->flow_speed = convert_speed_from_mps(v_mps, para->speed_unit_type);
+    out->flow_rate_instant = convert_rate_from_m3ps(q_m3ps, para->rate_unit_type);
+    out->flow_rate_total = convert_volume_from_m3(state->q_total_m3, total_unit);
+    out->sq_value = sq;
+    out->flow_speed_unit = para->speed_unit_type;
+    out->flow_rate_unit = para->rate_unit_type;
+    out->flow_total_unit = total_unit;
 }
 
-static void flow_alarm(Pipe_Parameters_t *para,
-                       Pipe_algo_out_data_t *out)
+void flow_alarm(Pipe_Parameters_t *para,
+                double flow_speed_mps)
 {
-    if (out->flow_rate_instant >= para->alarm_upper_rate_range)
+    const double flow_rate_m3ps = flow_speed_mps * pipe_area_m2(para);
+
+    if (flow_rate_m3ps >= para->alarm_upper_rate_range)
     {
         g_alarm = ALARM_RATE_TOO_HIGH;
     }
-    else if (out->flow_rate_instant <= para->alarm_lower_rate_range)
+    else if (flow_rate_m3ps <= para->alarm_lower_rate_range)
     {
         g_alarm = ALARM_RATE_TOO_LOW;
     }

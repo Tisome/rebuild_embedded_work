@@ -34,6 +34,6 @@ void update_flow_outputs(Pipe_Parameters_t *para,
                          double v_mps);
 
 void flow_alarm(Pipe_Parameters_t *para,
-                Pipe_algo_out_data_t *out);
+                double flow_speed_mps);
 
 #endif

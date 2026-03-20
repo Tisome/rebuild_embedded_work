@@ -17,18 +17,24 @@ void task_display(void *pvParameter)
 {
     (void)pvParameter;
 
-    Pipe_algo_out_data_t local_out;
+    Pipe_algo_out_data_t data;
 
     while (1)
     {
-        if (xQueueReceive(xQueue_AlgoOut, &local_out, pdMS_TO_TICKS(1000)) == pdTRUE)
+        if (xQueueReceive(xQueue_AlgoOut, &data, pdMS_TO_TICKS(1000)) == pdTRUE)
         {
             log_v("receive algo output");
             log_i("----- Pipe Algo Output -----");
-            log_i("flow_speed        : %.3f", data->flow_speed);
-            log_i("flow_rate_instant : %.3f", data->flow_rate_instant);
-            log_i("flow_rate_total   : %.3f", data->flow_rate_total);
-            log_i("sq_value          : %.3f", data->sq_value);
+            log_i("flow_speed        : %.3f %s",
+                  data.flow_speed,
+                  speed_unit_to_str(data.flow_speed_unit));
+            log_i("flow_rate_instant : %.3f %s",
+                  data.flow_rate_instant,
+                  rate_unit_to_str(data.flow_rate_unit));
+            log_i("flow_rate_total   : %.3f %s",
+                  data.flow_rate_total,
+                  volume_unit_to_str(data.flow_total_unit));
+            log_i("sq_value          : %.3f %%", data.sq_value);
         }
         else
         {

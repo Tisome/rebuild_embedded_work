@@ -37,7 +37,7 @@ void rufx_unpack_packet(const rufx_raw_packet_t *raw,
     out->conv_y2 = sign_extend_48(y2);
     out->conv_y3 = sign_extend_48(y3);
 
-    *seq = (uint8_t)b[22];
+    *seq = raw->seq;
 }
 
 bool rufx_calc_t1_t2_dt(const rufx_packet_t *pkt,

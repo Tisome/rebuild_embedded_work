@@ -36,7 +36,7 @@ static void vSemaphoreInit(void)
 static void vQueueInit(void)
 {
     // 创建接收数据队列
-    xQueue_Rx_Index_Buf = xQueueCreate(10, sizeof(rufx_raw_packet_t));
+    xQueue_Rx_Index_Buf = xQueueCreate(1, sizeof(rufx_raw_packet_t));
     configASSERT(xQueue_Rx_Index_Buf != NULL);
 
     // 创建算法输出队列
