@@ -13,6 +13,7 @@
 /* 初始化和更新 */
 void init_modbus_data(void);
 void update_input_registers(void);
+void update_holding_registers_from_parameters(void);
 
 /* 功能处理 */
 void handle_read_coil(modbus_parser_t *parser);

@@ -38,7 +38,7 @@ bool algorithm_process_group(Pipe_Parameters_t *para,
     log_v("raw flow speed is %.3f m/s", flow_v_mps_raw);
 
     double flow_v_avg = 0.0;
-    if (!flow_window_add(state, flow_v_mps_raw, flow_v_avg))
+    if (!flow_window_add(state, *flow_v_mps_raw, *flow_v_avg))
     {
         log_v("don't out avg flow speed");
         return false;

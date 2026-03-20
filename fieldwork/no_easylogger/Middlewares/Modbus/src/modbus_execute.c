@@ -26,7 +26,7 @@ void task_modbus_execute(void *parameter)
 
             case MODBUS_CMD_SAVE_PARAMETERS:
                 /* 保存参数到 flash */
-                SaveParameters(*g_parameters);
+                SaveParameters(&g_parameters);
                 break;
 
             case MODBUS_CMD_LOAD_DEFAULT_PARAMETERS:
@@ -40,7 +40,7 @@ void task_modbus_execute(void *parameter)
             case MODBUS_CMD_SOFT_RESET:
                 /* 软件复位 */
                 // 先保存一下参数
-                SaveParameters(*g_parameters);
+                SaveParameters(&g_parameters);
                 NVIC_SystemReset();
                 break;
 

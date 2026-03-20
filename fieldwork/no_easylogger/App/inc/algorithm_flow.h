@@ -10,8 +10,8 @@ double sq_get_percent(const Pipe_algo_state_t *s);
 void sq_window_update(Pipe_algo_state_t *s, bool is_bad);
 
 bool flow_window_add(Pipe_algo_state_t *state,
-                     double v_raw,
-                     double v_avg);
+                     double *v_raw,
+                     double *v_avg);
 
 double run_kalman_filter(kalman_t *k, double measurement);
 

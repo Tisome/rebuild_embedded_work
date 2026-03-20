@@ -1,5 +1,3 @@
-#include "testTask.h"
-
 #include "data.h"
 #include "fake_data.h"
 #include "freertos_resources.h"

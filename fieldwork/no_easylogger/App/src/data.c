@@ -77,7 +77,7 @@ void parameter_init(void)
 
             .pipe_type = PIPE_PVC,
             .speed_unit_type = SPEED_UNIT_M_P_S,
-            .rate_unit_type = RATE_UNIT_L_P_MIN};
+            .rate_unit_type = RATE_UNIT_M3_P_S};
 
 #if USE_E2PROM
     if (LoadParameters(&g_parameters) != E2PROM_OK)

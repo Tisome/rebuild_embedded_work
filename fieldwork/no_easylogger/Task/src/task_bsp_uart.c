@@ -7,7 +7,7 @@ void do_create_bsp_uart_task(void)
 {
     BaseType_t result = pdPASS;
     result = xTaskCreate(task_uart_driver,
-                         "uart_task",
+                         "task uart driver",
                          512,
                          NULL,
                          2,

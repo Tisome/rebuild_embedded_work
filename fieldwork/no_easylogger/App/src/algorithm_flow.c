@@ -1,4 +1,5 @@
 #include "algorithm_flow.h"
+#include <math.h>
 
 #include "elog.h"
 #define LOG_TAG "algo_flow_out"
@@ -145,10 +146,10 @@ static double vel_calc_from_dt(Pipe_Parameters_t *para,
  *  - 输出时对窗口排序，按箱线图（IQR）剔除离群值，再求平均
  */
 bool flow_window_add(Pipe_algo_state_t *state,
-                     double v_raw,
-                     double v_avg)
+                     double *v_raw,
+                     double *v_avg)
 {
-    state->window_buf[state->window_idx] = v_raw;
+    state->window_buf[state->window_idx] = *v_raw;
     state->window_idx = (uint8_t)((state->window_idx + 1U) % FLOW_WINDOW_LEN);
     if (state->window_idx == 0U)
     {
@@ -204,7 +205,7 @@ bool flow_window_add(Pipe_algo_state_t *state,
         return false;
     }
 
-    v_avg = sum / (double)cnt;
+    *v_avg = sum / (double)cnt;
     return true;
 }
 
@@ -293,18 +294,18 @@ static void update_flow_outputs(Pipe_Parameters_t *para,
                                 double sq,
                                 double v_mps)
 {
-    // 1) 瞬时流量（m^3/s）
     const double A = pipe_area_m2(para);
+
+    /* 内部基准量：m^3/s */
     const double q_m3ps = v_mps * A;
 
-    // 2) 累计流量（m^3）
+    /* 累计流量保持 m^3 */
     state->q_total_m3 += q_m3ps * (double)DT_S;
 
-    // 3) 打包输出
-    out->flow_speed = v_mps;
-    out->flow_rate_instant = q_m3ps;
-    out->flow_rate_total = state->q_total_m3;
-    out->sq_value = sq;
+    out->flow_speed = v_mps;                  /* m/s */
+    out->flow_rate_instant = q_m3ps;          /* m^3/s */
+    out->flow_rate_total = state->q_total_m3; /* m^3 */
+    out->sq_value = sq;                       /* % */
 }
 
 static void flow_alarm(Pipe_Parameters_t *para,

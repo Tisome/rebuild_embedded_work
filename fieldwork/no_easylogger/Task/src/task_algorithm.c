@@ -86,5 +86,8 @@ void do_create_algorithm_task(void)
                           NULL,
                           9,
                           &task_algorithm_handle);
-    (void)xReturn;
+    if (xReturn != pdPASS)
+    {
+        log_e("Failed to create task algorithm");
+    }
 }

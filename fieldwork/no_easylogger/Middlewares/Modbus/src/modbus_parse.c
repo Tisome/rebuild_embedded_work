@@ -1,5 +1,6 @@
 #include "modbus_parse.h"
 #include "modbus_crc.h"
+#include "modbus_frame_process.h"
 #include "modbus_protocol.h"
 
 #include "bsp_usart.h"
@@ -26,6 +27,8 @@ void reset_modbus_parser(modbus_parser_t *parser)
 
 void task_modbus_parse(void *parameter)
 {
+    init_modbus_data();
+
     static uint32_t modbus_receive;
 
     // 创建队列，用于UART驱动任务给Modbus解析任务发送信息
@@ -138,6 +141,7 @@ void task_modbus_parse(void *parameter)
                     // 起始地址2字节 + 寄存器数量2字节 + 要写入的字节数1字节 + N字节个数据
                     case (MODBUS_FUNC_WRITE_MULTIPLE_REGISTERS):
                         parser.expected_data_length = 5;
+                        break;
 
                     default:
                         parser.expected_data_length = 0;
@@ -178,7 +182,7 @@ void task_modbus_parse(void *parameter)
                     // 处理CRC高字节
                     parser.crc |= (byte << 8);
 
-                    if (parser.calculated_crc = parer.crc)
+                    if (parser.calculated_crc = parser.crc)
                     {
                         process_modbus_frame(&parser);
                     }

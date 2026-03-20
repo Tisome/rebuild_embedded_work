@@ -7,7 +7,7 @@ static void task_start(void *params)
     // taskENTER_CRITICAL();
 
     //  输出
-    do_create_display_task();
+    do_create_display_task(); // DONE
 
     // 计算
     do_create_algorithm_task(); // DONE
@@ -18,20 +18,20 @@ static void task_start(void *params)
     // spi输出
     do_create_spi_rx_task(); // DONE
 
-    // uart接受数据
-    do_create_bsp_uart_task(); // DONE
-
     // e2prom
     do_create_bsp_e2prom_task(); // DONE
 
+    // uart接受数据
+    do_create_bsp_uart_task(); // DONE
+
     // modbus解析
-    do_create_modbus_parse_task();
+    do_create_modbus_parse_task(); // DONE
 
     // modbus执行
-    do_create_modbus_execute_task();
+    do_create_modbus_execute_task(); // DONE
 
     // watchdog
-    do_create_watchdog_task();
+    do_create_watchdog_task(); // DONE
 
     // 测试数据
     do_create_test_task(); // DONE

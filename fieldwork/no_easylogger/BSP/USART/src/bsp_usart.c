@@ -2,9 +2,15 @@
 #include "circular_buffer.h"
 #include "freertos_resources.h"
 
+#include "modbus_parse.h"
+
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "task.h"
+
+#include "elog.h"
+#define LOG_TAG "uart_driver"
+#define LOG_LVL ELOG_LVL_VERBOSE
 
 circular_buf_t *g_uart_circular_irq_buf;
 
@@ -47,8 +53,16 @@ void task_uart_driver(void *parameter)
         {
             // 处理UART接收事件
             uint32_t send_to_end = UART_TASK_SEND_TO_MODBUS_TASK;
-            Basetype_t queue_ret = xQueueGenericSend(g_)
+            BaseType_t queue_ret = xQueueGenericSend(g_modbus_parse_queue,
+                                                     &send_to_end,
+                                                     0,
+                                                     queueOVERWRITE);
+            if (queue_ret != pdTRUE)
+            {
+                log_e("ERROR, uart driver send to modbus task fail");
+            }
         }
+        vTaskDelay(pdMS_TO_TICKS(5));
     }
 }
 

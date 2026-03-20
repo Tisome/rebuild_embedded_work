@@ -1,3 +1,4 @@
+#include "modbus_execute.h"
 #include "task_manager.h"
 static TaskHandle_t task_modbus_execute_handle = NULL;
 
@@ -5,7 +6,7 @@ void do_create_modbus_execute_task(void)
 {
     BaseType_t result = pdPASS;
     result = xTaskCreate(task_modbus_execute,
-                         "modbus_parse_task",
+                         "task modbus execute",
                          512,
                          NULL,
                          2,

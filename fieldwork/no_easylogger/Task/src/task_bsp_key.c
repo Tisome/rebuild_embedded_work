@@ -23,7 +23,7 @@ void do_create_bsp_key_task(void)
 {
     BaseType_t result = pdPASS;
     result = xTaskCreate(task_key,
-                         "key_task",
+                         "task key",
                          256,
                          NULL,
                          2,

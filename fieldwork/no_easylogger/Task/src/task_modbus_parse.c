@@ -7,7 +7,7 @@ void do_create_modbus_parse_task(void)
 {
     BaseType_t result = pdPASS;
     result = xTaskCreate(task_modbus_parse,
-                         "modbus_parse_task",
+                         "task modbus parse",
                          512,
                          NULL,
                          2,
